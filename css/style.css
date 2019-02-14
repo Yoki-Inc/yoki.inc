@@ -82,16 +82,17 @@ section {
 	background-color: #fff;
 	border: 2px solid #333;
 	color: #333;
-}
-.btn {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
 }
 .btn:hover {
-	border: 2px dashed;
+	background: #333;
+	color: #fff;
+	transition: .3s;
+	border: 2px solid #333;
 }
 .btn span {
 	line-height: 20px;
@@ -100,6 +101,12 @@ section {
 }
 .btn span img.icon {
 	width: 17px!important;
+}
+.im {
+	vertical-align: middle;
+	margin-left: 5px;
+	font-size: inherit;
+	color: initial;
 }
 /** 
 		HEADER
@@ -141,10 +148,21 @@ header ul li {
 header #toggle {
 	display: none;
 }
-header #toggle img {
+header #toggle .im {
 	position: absolute;
+	font-size: 30px;
     top: 20px;
     right: 30px;
+}
+@media (min-width: 768px) {
+	header nav ul li a {
+		transition: .3s opacity;
+		opacity: 1;
+	}
+	header nav ul li a:hover {
+		transition: .3s opacity;
+		opacity: 0.5;
+	}
 }
 @media (max-width: 767px) {
 	header .container {
@@ -347,11 +365,18 @@ section#board .column-container .right-column {
 section#board .column-container .profile-link {
 	vertical-align: middle;
 	padding-left: 15px;
-}
-section#board .column-container .profile-link img.icon-contact {
-	width: 23px;
-    opacity: 0.8;
+	font-size: : 23px;
+	line-height: 25px;
+	vertical-align: middle;
     display: inline-block;
+}
+section#board .column-container .profile-link .im {
+	margin-left: 0;
+	transition: .15s opacity;
+}
+section#board .column-container .profile-link a:hover .im {
+	opacity: 0.6;
+	transition: .15s opacity;
 }
 section#board .column-container .left-column .profile-link {
 	display: inline-block;
@@ -401,6 +426,9 @@ section#board .column-container img {
 		width: 100%;
 		float: none;
 		padding-left: 0px;
+	}
+	section#board .column-container .profile-link {
+		font-size: 30px;
 	}
 	section#board .column-container .left-column .profile-link {
 		display: none;
@@ -532,7 +560,7 @@ section#contact input[type="text"], textarea {
     padding: 0 10px;
     margin-bottom: 15px;
     font-weight: bold;
-    font-family: inherit;
+    font-family: Avenir, "Noto Sans", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
     border: 1px solid #dfdfdf;
 }
 section#contact input[type="text"]:focus, textarea:focus {
@@ -555,16 +583,16 @@ section#contact input[type="submit"] {
 	background: #fff;
 	color: #00243b;
     font-weight: bold;
-    font-family: inherit;
+    font-family: Avenir, "Noto Sans", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
 	line-height: 1em;
 	transition: .3s;
-	border: 3px solid #00243b;
+	border: 2px solid #00243b;
 }
 section#contact input[type="submit"]:hover {
 	background: #00243b;
 	color: #fff;
 	transition: .3s;
-	border: 3px solid #00243b;
+	border: 2px solid #00243b;
 }
 @media (max-width: 575px) {
 	section#contact input, textarea {
@@ -579,12 +607,12 @@ footer {
 	background-color: #00253A;
 	height: 160px;
 	position: relative;
+	color: #fff;
 }
 footer span {
 	position: absolute;
 	left: 10px;
 	bottom: 10px;
-	color: #fff;
 	opacity: 0.5;
 	font-weight: normal;
 }
@@ -599,12 +627,14 @@ footer ul li {
     display: inline-block;
     margin-right: 5px;
 }
-footer ul li img {
-	width: 20px;
+footer ul li .im {
+	color: #fff;
+	font-size: 20px;
+	margin-left: 3px;
 	opacity: 0.5;
 	transition: 0.3s opacity;
 }
-footer ul li a:hover img {
+footer ul li a:hover .im {
 	opacity: 0.8;
 	transition: 0.3s opacity;
 }
