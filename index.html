@@ -227,9 +227,13 @@ $(document).ready(function(){
 </script>
 <script>
 $(function(){
-	$('.toggle').click(function(){
-		$("nav").fadeToggle();
-	});
+  if (window.matchMedia('(max-width:767px)').matches) {
+		$(function(){
+			$('.toggle').click(function(){
+				$("nav").fadeToggle();
+			});
+		});
+	}
 });
 </script>
 <script>
