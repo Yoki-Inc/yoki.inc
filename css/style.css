@@ -3,22 +3,113 @@ html, body {
 	margin:0;
 }
 body {
-	font-family: "Noto Sans JP", sanserif;
+	font-family: "Noto Sans JP", "Noto Sans", sanserif;
+	font-weight: bold!important;
 }
+
+h1 {
+	padding: 0 5px 4px 5px;
+	font-size: 40px;
+	display: inline-block;
+    line-height: 1em;
+	background: linear-gradient(transparent 70%, #10CBCE 0%);
+}
+h2 {
+	font-size: 30px;
+}
+p {
+	font-size: 20px;
+	letter-spacing: 0.06em;
+    line-height: 1.7em;
+    text-align: justify;
+}
+section {
+	margin-bottom: 50px;
+}
+.lead {
+	width: 100%;
+}
+.container {
+	max-width: 1000px;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+.clear,
+.column-container {
+	clear: both;
+}
+
+
+
+.btn {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	padding: 5px 15px;
+	position: relative;
+	z-index: 2;
+	background-color: #fff;
+	border: 2px solid #333;
+	color: #333;
+}
+.btn {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn:hover {
+	border: 2px dashed;
+}
+
+
+
+
+/** 
+		HEADER
+					**/
 header {
 	position: fixed;
-	height: 100px;
 	width: 100%;
-	background-color: #fff;
 	top: 0;
 	z-index: 99;
 }
 header .logo {
-	width: 50px;
+	width: 30px;
 	height: auto;
 }
+header img {
+	position: absolute;
+    left: 30px;
+    top: 20px;
+}
+header a {
+	text-decoration: none;
+	color: unset;
+}
+header nav {
+	position: absolute;
+    left: 100px;
+}
+header ul {
+	margin: 0;
+	padding: 0;
+}
+header ul li {
+	line-height: 70px;
+    display: inline-block;
+    margin-right: 25px;
+}
+
+
+
+
+
 section#top {
 	height: 80vh;
+	position: relative;
 	background-image: url(../assets/top-bg.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -28,7 +119,159 @@ section#top:after {
 	height: 100%;
 	width: 100%;
 	position: absolute;
+	left: 0;
+	top: 0;
 	content: "";
-	background-color: rgba(255,255,255,0.3);
+	background-color: rgba(255,255,255,0.15);
+}
+section#top .fade {
+	position: absolute;
+	bottom: 0;
+	z-index: 100;
+	height: 30px;
+	width: 100vw;
+	background-image: url(../assets/fade.png);
 }
 
+section#message h1 {
+	font-size: 50px!important;
+}
+section#message p {
+	font-size: 23px!important;
+	margin: 30px 0;
+}
+section#message p span {
+    display: block;
+    margin: 7px 0;
+}
+
+section#products .box {
+	width: calc(50% - 10px);
+	float: left;
+}
+section#products .box#haco {
+	padding-right: 10px;
+}
+section#products .box#hacrew {
+	padding-left: 10px;
+}
+section#products img {
+	width: 100%;
+}
+section#products .box h2 {
+	color: #6B43E0;
+}
+section#products .box h2 span {
+	font-size: 0.5em;
+	opacity: 0.7;
+}
+
+
+
+/*section#board .column-container {
+	display: table;
+
+}
+section#board .column-container .column {
+	display: table-cell;
+	padding: 0;
+    vertical-align: top;
+}*/
+
+section#board h2 {
+	margin: 0;
+	font-size: 25px;
+}
+section#board .column-container {
+    margin-bottom: 20px;
+}
+section#board .column-container img {
+	width: 100%;
+	height: auto;
+}
+section#board .column-container .left-column {
+	width: 20%;
+	min-width: 200px;
+	float: left;
+}
+section#board .column-container .right-column {
+	width: calc(80% - 20px);
+	/*min-width: calc(100% - 200px);*/
+	float: left;
+	padding-left: 20px;
+}
+
+
+
+section#about-us table {
+	margin: 0 auto;
+	width: 100%;
+	text-align: left;
+	font-size: 20px;
+	line-height: 2em;
+}
+section#about-us table , td, th {
+	border-top: 2px solid #595959;
+	border-bottom: 2px solid #595959;
+	border-collapse: collapse;
+}
+section#about-us table th {
+	vertical-align: top;
+	padding: 12px 30px;
+    width: 30%;
+}
+section#about-us table td {
+	width: 70%;
+}
+section#about-us td, th {
+	padding: 3px;
+}
+
+
+
+
+
+section#contact label {
+    display: block;
+    font-size: 20px;
+    line-height: 2em;
+}
+section#contact input[type="text"], textarea {
+	width: 60%;
+    max-width: 600px;
+    font-size: 20px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: "Noto Sans JP";
+    border: 1px solid #dfdfdf;
+}
+section#contact input[type="text"]:focus, textarea:focus {
+    border: 1px solid #00243b;
+    outline: 0;
+}
+section#contact input[type="text"] {
+    height: 50px;
+}
+section#contact textarea {
+	height: 200px;
+}
+section#contact input[type="submit"] {
+	display: inline-block;
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+	padding: 10px 40px;
+	background: #00243b;
+	color: #fff;
+	line-height: 1em;
+	transition: .3s;
+	border: 2px solid #00243b;
+}
+
+section#contact input[type="submit"]:hover {
+	background: #fff;
+	color: #000;
+	transition: .3s;
+	border: 2px solid #00243b;
+}
