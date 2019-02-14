@@ -10,28 +10,29 @@
 		<title>Yoki Inc.｜株式会社Yoki</title>
 
 		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
-		<!-- CSS Reset -->
-		<link rel="stylesheet" href="https://raw.githubusercontent.com/twbs/bootstrap/v4-dev/dist/css/bootstrap-reboot.css">
+		<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
 		<!-- CSS  -->
 		<link href="css/style.css" rel="stylesheet">
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	</head>
 <body>
-	<header>
+	<header id="header">
 		<div class="container" style="position: relative;">
 			<a href="#">
 				<img src="assets/logo.png" class="logo">
 			</a>
-			<nav>
+			<nav id="nav">
 				<ul>
-					<li><a href="#mission">MISSION</a></li>
-					<li><a href="#products">PRODUCT</a></li>
-					<li><a href="#board">TEAM</a></li>
-					<li><a href="#recruit">RECRUIT</a></li>
-					<li><a href="#about-us">ABOUT US</a></li>
-					<li><a href="#contact">CONTACT</a></li>
+					<li><a class="toggle" href="#mission">MISSION</a></li>
+					<li><a class="toggle" href="#products">PRODUCT</a></li>
+					<li><a class="toggle" href="#board">TEAM</a></li>
+					<li><a class="toggle" href="#recruit">RECRUIT</a></li>
+					<li><a class="toggle" href="#about-us">ABOUT US</a></li>
+					<li><a class="toggle" href="#contact" class="last">CONTACT</a></li>
 				</ul>
 			</nav>
+			<div id="toggle" class="toggle" ><img src="assets/toggle.svg"></div>
 		</div>
 	</header>
 	<section id="top">
@@ -39,10 +40,10 @@
 		</div>
 		<div class="fade"></div>
 	</section>
-	<section id="message">
+	<section id="mission">
 		<div class="container">
 			<div class="lead">
-				<h1>優しい情報端末をつくる</h1>
+				<h1>優しい<br>情報端末を<br>つくる</h1>
 			</div>
 			<p>「”知の自転車”を創る」とスティーブジョブズは言った。</p>
 			<p>肉体的な能力を最大限に発揮させた自転車のように、<br>
@@ -58,7 +59,7 @@
 			<p>効率化、高速化をする情報端末ではなく、<br>
 			感情ベースでつながることができる優しい情報端末をつくる。</p>
 
-			<a href="#" class="btn">会社案内資料で詳しく見る</a>
+			<a href="#" class="btn">会社案内資料で詳しく見る<span><img src="assets/link.svg" class="icon"></span></a>
 		</div>
 	</section>
 	<section id="products">
@@ -70,13 +71,13 @@
 				<img src="assets/haco.jpg" class="product">
 				<h2>HACO <span>いちから作れるロボット。</span></h2>
 				<p>レーザーカッターでカットされたパーツで構成されています。コンピューターボードはRaspberry Piでソフトウェアの多くがオープンソースです。汎用的な部品で構成されており、誰もがカスタマイズすることができます。</p>
-				<a href="#" class="btn">HACOについて詳しく見る</a>
+				<a href="#" class="btn">HACOについて詳しく見る<span><img src="assets/link.svg" class="icon"></span></a>
 			</div>
 			<div class="box" id="hacrew">
 				<img src="assets/hacrew.jpg" class="product">
 				<h2>HACREW <span>誰でも使えるHACOのための開発環境。</span></h2>
 				<p>誰もが使えるHACO用のソフトウェア開発環境です。ブロックプログラミングとテキストプログラミングを組み合わせているのが特徴で、ブロックで簡単にプログラムを組むこもできるし、テキストで一般的なコーディングをすることもできます。</p>
-				<a href="#" class="btn">HACREWについて詳しく見る</a>
+				<a href="#" class="btn">HACREWについて詳しく見る<span><img src="assets/link.svg" class="icon"></span></a>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -89,20 +90,38 @@
 			<div class="column-container">
 				<div class="left-column column">
 					<img src="assets/fuma_higashide.jpg">
+					<div class="profile-link">
+						<a href="https://twitter.com/fumah815"><img src="assets/twitter.svg" class="icon-contact"></a>
+						<a href="https://m.me/fumah815"><img src="assets/messanger.svg" class="icon-contact"></a>
+					</div>
 				</div>
 				<div class="right-column column">
-					<h2>代表取締役CEO   東出風馬</h2>
-					<p>中学２年時に現在のYokiの事業を着想し、高校2年生のときに東京都主催のビジネスコンテスト「TOKYO STARTUP GATEWAY 2016」にエントリーし優秀賞を受賞。2017年2月、株式会社Yokiを創業し代表取締役に就任。</p>
+					<h2><span class="role">代表取締役CEO</span><br>   東出風馬
+						<span class="profile-link">
+							<a href="https://twitter.com/fumah815"><img src="assets/twitter.svg" class="icon-contact"></a>
+							<a href="https://m.me/fumah815"><img src="assets/messanger.svg" class="icon-contact"></a>
+						</span>
+					</h2>
+					<p>中学2年時に現在のYokiの事業を着想し、2016年秋、高校2年のときに東京都主催の「TOKYO STARTUP GATEWAY」に応募。テーマ「能動的かつ直感的なロボットで今までの情報端末の限界を超える。」で優秀賞を受賞。2017年2月、株式会社Yokiを創業し代表取締役に就任。</p>
 				</div>
 				<div class="clear"></div>
 			</div>
 			<div class="column-container">
 				<div class="left-column column">
 					<img src="assets/naoki_shirahige.jpg">
+					<div class="profile-link">
+						<a href="https://twitter.com/_naonosuke"><img src="assets/twitter.svg" class="icon-contact"></a>
+						<a href="https://m.me/naonosuke.jp"><img src="assets/messanger.svg" class="icon-contact"></a>
+					</div>
 				</div>
 				<div class="right-column column">
-					<h2>取締役COO   白髭直樹</h2>
-					<p>これまでにフリーランサー，ITベンチャー，教育団体代表等を経て事業型教育系NPOに移り、事業企画を担い事業業績の立て直しに奔走。着任からおおよそ1年で事業単体のV字回復を果たした。2018年5月より株式会社Yokiに参画し開発部門ディレクターを経て現職。</p>
+					<h2><span class="role">取締役COO</span><br>   白髭直樹
+						<span class="profile-link">
+							<a href="https://twitter.com/_naonosuke"><img src="assets/twitter.svg" class="icon-contact"></a>
+							<a href="https://m.me/naonosuke.jp"><img src="assets/messanger.svg" class="icon-contact"></a>
+						</span>
+					</h2>
+					<p>フリーランサー，ITベンチャー，教育団体代表等を経て，事業型教育系NPOに移り，事業企画を担い事業業績の立て直しに奔走。おおよそ1年で事業単体のV字回復を果たした。2018年5月より株式会社Yokiに参画し開発部門ディレクターを経て現職。現在も教育活動に従事し，一般社団法人CRoots 理事など。</p>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -111,8 +130,8 @@
 					<img src="assets/takaya_haneda.jpg">
 				</div>
 				<div class="right-column column">
-					<h2>社外取締役FA   羽田隆也</h2>
-					<p>大和証券SMBCにて投資銀行業務に従事した後、ラクスル株式会社に参画し管理部長兼カスタマーサポートマネージャーに就任。2014年大和証券に戻りIPO業務を行う。現在は株式会社バスユニットの代表。2018年10月より株式会社Yoki社外取締役FA就任。</p>
+					<h2><span class="role">社外取締役FA</span><br>   羽田隆也</h2>
+					<p>大和証券SMBCにて投資銀行業務に従事。IPO部門にてベンチャーなど未上場企業、上場企業に対し財務デューディリから、エクイティストーリーの構築、バリュエーション、IPOコンサルティング等を行う。その後、ラクスル株式会社に参画し、印刷EC事業のPMとして事業立ち上げを推進、管理部長兼カスタマーサポートマネージャー。2014年大和証券に戻りIPO業務を行い、延べ5社のIPOを実現。現在は独立し、株式会社バスユニット代表。</p>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -124,8 +143,14 @@
 				<h1>採用情報</h1>
 			</div>
 			<p>Yokiは「世界中どこでも、どんなコミット時間でも働ける」を目指しています。子育てをしながら、副業をしながら働いているクルーもいます。それぞれの地域からそれぞれの知恵と経験を共有し、よりよいチームを目指します。一緒に働きましょう。</p>
-			<iframe src="https://open.talentio.com/1/c/yoki/requisitions/822"></iframe>
-			<a href="https://open.talentio.com/1/c/yoki/requisitions/822">Link</a>
+			<div class="wework">
+				<img src="assets/wework-1.jpg">
+				<img src="assets/wework-2.jpg">
+				<img src="assets/wework-3.jpg">
+				<img src="assets/wework-4.jpg">
+			</div>
+			<div class="clear"></div>
+			<a href="https://open.talentio.com/1/c/yoki/requisitions/822" class="btn">採用情報を見る<span><img src="assets/link.svg" class="icon"></span></a>
 		</div>
 	</section>
 	<section id="about-us">
@@ -137,7 +162,7 @@
 				<tbody>
 					<tr>
 						<th>社名</th>
-						<td>株式会社Yoki(Yoki Inc.)</td>
+						<td>株式会社Yoki（英文社名: Yoki Inc.）</td>
 					</tr>
 					<tr>
 						<th>役員</th>
@@ -174,9 +199,46 @@
 				<label for="email">メールアドレス(必須)</label><input id="email" maxlength="80" name="email" type="text" required="" placeholder="hi@example.com"><br>
 				<label for="phone">電話</label><input id="phone" maxlength="40" name="phone" type="text" placeholder="050-5216-9687"><br>
 				<label for="description">お問い合わせ内容</label><textarea name="description" class="czr-focusable"></textarea><br>
-				<input type="submit" name="submit">
+				<input type="submit" name="submit" value="私たちに送る" placeholder="hi@example.com">
 			</form>
+		</div>
 	</section>
+	<footer>
+		<span>© 2019 Yoki Inc.</span>
+		<ul>
+			<li><a href="https://www.facebook.com/Yoki.Inc/"><img src="assets/facebook_w.svg"></a></li>
+			<li><a href="https://twitter.com/Yoki_Inc"><img src="assets/twitter_w.svg"></a></li>
+			<li><a href="https://instagram.com/yoki_inc/"><img src="assets/instagram_w.svg"></a></li>
+			<li><a href="https://www.youtube.com/channel/UCt8_BZFX_t7FQnHE9Pcb1QQ"><img src="assets/youtube_w.svg"></a></li>
+		</ul>
+	</footer>
 
 </body>
+<script>
+$(document).ready(function(){
+  $(window).scroll(function() {
+    if($(this).scrollTop() > $("#top").height()) {
+      $("header").addClass('active')
+    } else {
+      $("header").removeClass('active')
+    }
+  });
+});
+</script>
+<script>
+$(function(){
+	$('.toggle').click(function(){
+		$("nav").fadeToggle();
+	});
+});
+</script>
+<script>
+$('a[href^="#"]').click(function() {
+	var href= $(this).attr("href");
+	var target = $(href == "#" || href == "" ? 'html' : href);
+	var position = target.offset().top;
+	$('body,html').animate({scrollTop:position - 50}, 500, 'swing');
+	return false;
+});
+</script>
 </html>
