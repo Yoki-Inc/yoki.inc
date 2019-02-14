@@ -94,19 +94,17 @@ section {
 	transition: .3s;
 	border: 2px solid #333;
 }
-.btn span {
-	line-height: 20px;
-	vertical-align: middle;
-	padding-left: 5px;
-}
-.btn span img.icon {
-	width: 17px!important;
+.btn:hover .im {
+	color: #fff;
+	transition: .3s;
 }
 .im {
 	vertical-align: middle;
 	margin-left: 5px;
+	line-height: inherit;
 	font-size: inherit;
 	color: initial;
+	transition: .3s;
 }
 /** 
 		HEADER
@@ -196,7 +194,7 @@ header #toggle .im {
 		position: absolute;
 		width: 100%;
 		left: 0;
-		bottom: 1px;
+		bottom: 7px;
 		border-bottom: 5px solid #000;
 		content: "";
 	}
@@ -500,8 +498,8 @@ section#recruit a.btn {
 	letter-spacing: 0.2em;
 	font-size: 20px;
 }
-section#recruit a.btn span img.icon {
-	width: 19px!important;
+section#recruit a.btn .im {
+	font-size: 19px!important;
 }
 @media (max-width: 575px) {
 	section#recruit a.btn {
