@@ -6,8 +6,9 @@ html, body {
 	margin:0;
 }
 body {
-	font-family: Avenir, "Noto Sans", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
+	font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
 	font-weight: bold!important;
+	color: #00253A;
 }
 h1 {
 	font-size: 40px;
@@ -79,9 +80,8 @@ section {
 	padding: 5px 15px;
 	position: relative;
 	z-index: 2;
-	background-color: #fff;
-	border: 2px solid #333;
-	color: #333;
+	border: 2px solid #00253A;
+	color: #00253A;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -89,7 +89,7 @@ section {
 	transition: all .3s;
 }
 .btn:hover {
-	background: #333;
+	background: #00253A;;
 	color: #fff;
 	transition: .3s;
 	border: 2px solid #333;
@@ -203,6 +203,11 @@ header #toggle .im {
 		float: right;
 	}
 }
+@media (max-width: 370px) {
+	header nav {
+		padding-left: 30px;
+	}
+}
 /** 
 		#top
 					**/
@@ -225,15 +230,6 @@ section#top:after {
 }
 section#top .top-bg {
 	display: none
-}
-section#top .fade {
-	position: absolute;
-	bottom: 0;
-	z-index: 100;
-	width: 100vw;
-	height: 50px;
-    background-size: contain;
-	background-image: url(../assets/fade.png);
 }
 @media (max-width: 662px) {
 	section#top {
@@ -427,7 +423,8 @@ section#board .column-container img {
 		padding-left: 0px;
 	}
 	section#board .column-container .profile-link {
-		font-size: 30px;
+		
+		font-size: 1em;
 	}
 	section#board .column-container .left-column .profile-link {
 		display: none;
@@ -536,9 +533,8 @@ section#about-us table th {
 }
 section#about-us table td {
 	width: 70%;
-}
-section#about-us td, th {
-	padding: 3px;
+	line-height: 1.5em;
+    padding: 10px;
 }
 @media (max-width: 575px) {
 	section#about-us table th {
@@ -559,7 +555,7 @@ section#contact input[type="text"], textarea {
     padding: 0 10px;
     margin-bottom: 15px;
     font-weight: bold;
-    font-family: Avenir, "Noto Sans", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
+    font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
     border: 1px solid #dfdfdf;
 }
 section#contact input[type="text"]:focus, textarea:focus {
@@ -582,7 +578,7 @@ section#contact input[type="submit"] {
 	background: #fff;
 	color: #00243b;
     font-weight: bold;
-    font-family: Avenir, "Noto Sans", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
+    font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
 	line-height: 1em;
 	transition: .3s;
 	border: 2px solid #00243b;
