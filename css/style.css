@@ -8,7 +8,7 @@ html, body {
 body {
 	font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
 	font-weight: bold!important;
-	color: #00253A;
+	color: #313743;
 }
 h1 {
 	font-size: 40px;
@@ -559,7 +559,7 @@ section#contact input[type="text"], textarea {
     border: 1px solid #dfdfdf;
 }
 section#contact input[type="text"]:focus, textarea:focus {
-    border: 1px solid #00243b;
+    border: 1px solid #313743;
     outline: 0;
 }
 section#contact input[type="text"] {
@@ -576,18 +576,18 @@ section#contact input[type="submit"] {
 	cursor: pointer;
 	padding: 10px 40px;
 	background: #fff;
-	color: #00243b;
+	color: #313743;
     font-weight: bold;
     font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
 	line-height: 1em;
 	transition: .3s;
-	border: 2px solid #00243b;
+	border: 2px solid #313743;
 }
 section#contact input[type="submit"]:hover {
-	background: #00243b;
+	background: #313743;
 	color: #fff;
 	transition: .3s;
-	border: 2px solid #00243b;
+	border: 2px solid #313743;
 }
 @media (max-width: 575px) {
 	section#contact input, textarea {
