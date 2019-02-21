@@ -1,5 +1,5 @@
 /**
-	common settings 
+		COMMON CSS
 					**/
 html, body {
 	padding:0;
@@ -32,14 +32,7 @@ p {
 section {
 	margin-bottom: 50px;
 }
-.lead {
-	width: 100%;
-}
-.lead h1 {
-	padding: 0 5px 4px 5px;
-	line-height: 1em;
-	background: linear-gradient(transparent 70%, #10CBCE 0%);
-}
+/** Container **/
 .container {
 	box-sizing: border-box;
 	width: 100%;
@@ -72,6 +65,7 @@ section {
 .column-container {
 	clear: both;
 }
+/** Button **/
 .btn {
 	display: inline-block;
 	text-align: center;
@@ -105,6 +99,35 @@ section {
 	font-size: inherit;
 	color: initial;
 	transition: .3s;
+}
+/** H1 TAG **/
+@media (min-width: 768px) {
+	h1 {
+		position: relative;
+	}
+	h1:after {
+		background: linear-gradient(transparent 70%, #10CBCE 0%);
+		content: "";
+		width: 100%;
+		position: absolute;
+		left: 0;
+		height: 57px;
+		z-index: -9;
+	}
+}
+@media (max-width: 767px) {
+	h1 span {
+		position: relative;
+	}
+	h1 span:after {
+		background: linear-gradient(transparent 70%, #10CBCE 0%);
+		content: "";
+		width: 100%;
+		position: absolute;
+		left: 0;
+		height: 57px;
+		z-index: -9;
+	}
 }
 /** 
 	PROGRESS BAR
