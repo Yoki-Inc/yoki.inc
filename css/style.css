@@ -82,10 +82,10 @@ section {
 	transition: all .3s;
 }
 .btn:hover {
-	background: #00253A;;
+	background: #00253A;
 	color: #fff;
 	transition: .3s;
-	border: 2px solid #333;
+	border: 2px solid #00253A;
 }
 .btn:hover .im {
 	color: #fff;
@@ -640,7 +640,7 @@ section#contact label {
 	font-size: 20px;
 	line-height: 2em;
 }
-section#contact input, textarea {
+section#contact input, textarea, button {
 	width: 60%;
 	font-size: 20px;
 	padding: 0 10px;
@@ -649,8 +649,8 @@ section#contact input, textarea {
 	font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
 	border: 1px solid #dfdfdf;
 }
-section#contact input:focus, textarea:focus {
-	border: 1px solid #313743;
+section#contact input:focus, textarea:focus, button:focus {
+	border: 1px solid #00253A;
 	outline: 0;
 }
 section#contact input {
@@ -660,7 +660,7 @@ section#contact textarea {
 	height: 200px;
 	padding: 10px;
 }
-section#contact input[type="submit"] {
+section#contact button {
 	display: inline-block;
 	width: 62%;
 	font-size: 20px;
@@ -668,21 +668,21 @@ section#contact input[type="submit"] {
 	cursor: pointer;
 	padding: 10px 40px;
 	background: #fff;
-	color: #313743;
+	color: #00253A;
 	font-weight: bold;
 	font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
 	line-height: 1em;
 	transition: .3s;
-	border: 2px solid #313743;
+	border: 2px solid #00253A;
 }
-section#contact input[type="submit"]:hover {
-	background: #313743;
+section#contact button:hover {
+	background-color: #00253A;
 	color: #fff;
 	transition: .3s;
-	border: 2px solid #313743;
+	border: 2px solid #00253A;
 }
 @media (max-width: 767px) {
-	section#contact input, textarea {
+	section#contact input, textarea, button {
 		width: 100%!important;
 		box-sizing: border-box;
 	}
@@ -724,4 +724,179 @@ footer ul li .im {
 footer ul li a:hover .im {
 	opacity: 0.8;
 	transition: 0.3s opacity;
+}
+/**
+	  Completed Modal
+						**/
+#completed {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	z-index: 999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: none;
+    position: fixed;
+    background-color: rgba(255,255,255,0.7);
+}
+#completed.active {
+	display: flex;
+}
+#completed svg {
+	width: 15%;
+	min-width: 300px;
+	height: auto;
+	color: #000;
+}
+#completed p {
+	margin-top: 0;
+	margin-bottom: 15px;
+    text-align: center;
+    line-height: 1.2em;
+}
+#completed button {
+	z-index: 100;
+	background: #000;
+	border: 0;
+	border-radius: 3px;
+	bottom: 100px;
+	color: #fff;
+	left: 50%;
+	outline: 0;
+	padding: 10px 30px;
+	position: absolute;
+	-webkit-transform: translateX(-50%);
+	      transform: translateX(-50%);
+	transition: .3s opacity;
+}
+#completed button:active,
+#completed button:hover {
+	opacity: 0.7;
+	transition: .3s opacity;
+}
+#successAnimationResult {
+    fill: green!important;
+}
+#successAnimationCheck {
+    stroke: green!important;
+}
+#successAnimationCircle {
+	stroke: green!important;
+}
+@-webkit-keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 151px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 151px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 36px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 36px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#successAnimationCircle {
+  stroke-dasharray: 151px 151px;
+  stroke: #fff;
+}
+#successAnimationCheck {
+  stroke-dasharray: 36px 36px;
+  stroke: #fff;
+}
+#successAnimationResult {
+  fill: #fff;
+  opacity: 0;
+}
+#successAnimation.animated {
+  -webkit-animation: 1s ease-out 0s 1 both scaleAnimation;
+          animation: 1s ease-out 0s 1 both scaleAnimation;
+}
+#successAnimation.animated #successAnimationCircle {
+  -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle, 0.3s linear 0.9s 1 both fadeOut;
+          animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle, 0.3s linear 0.9s 1 both fadeOut;
+}
+#successAnimation.animated #successAnimationCheck {
+  -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck, 0.3s linear 0.9s 1 both fadeOut;
+          animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck, 0.3s linear 0.9s 1 both fadeOut;
+}
+#successAnimation.animated #successAnimationResult {
+  -webkit-animation: 0.3s linear 0.9s both fadeIn;
+          animation: 0.3s linear 0.9s both fadeIn;
 }

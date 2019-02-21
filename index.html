@@ -19,6 +19,15 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	</head>
 <body>
+	<div id="completed">
+		<svg id="successAnimation" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+			<path id="successAnimationResult" d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"/>
+			<circle id="successAnimationCircle" cx="35" cy="35" r="24"  stroke-width="2" stroke-linecap="round" fill="transparent"/>
+			<polyline id="successAnimationCheck"  stroke-width="2" points="23 34 34 43 47 27" fill="transparent"/>
+		</svg>
+		<p>登録ありがとうございます。</p><p>最新情報が見つかり次第、<br>責任を持ってお届けします。</p>
+		<button id="close">とじる</button>
+	</div>
 	<div id="progress"></div>
 	<header id="header">
 		<div class="container" style="position: relative;">
@@ -196,13 +205,16 @@
 			</div>
 			<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="czr-focus">
 				<input type="hidden" name="orgid" value="00D6F000002VY7U">
-				<input type="hidden" name="retURL" value="https://yoki-jp.com">
+				<input type="hidden" name="retURL" value="https://yoki-jp.com?completed=true">
+				<input type="hidden" name="00N6F00000JRVuz" value="yoki-jp.com">
 				<label for="company">貴社名</label><input id="company" maxlength="80" name="company" type="text" placeholder="株式会社Yoki"><br>
 				<label for="name">ご担当者様(必須)</label><input id="name" maxlength="80" name="name" type="text" placeholder="与喜 太郎" required><br>
 				<label for="email">メールアドレス(必須)</label><input id="email" maxlength="80" name="email" type="email" required="" placeholder="hi@example.com" required><br>
 				<label for="phone">電話</label><input id="phone" maxlength="40" name="phone" type="tel" placeholder="050-5216-9687"><br>
 				<label for="description">お問い合わせ内容(必須)</label><textarea name="description" class="czr-focusable" required></textarea><br>
-				<input type="submit" name="submit" value="私たちに送る">
+				<button type="submit">
+					私たちに送る
+				</button>
 			</form>
 		</div>
 	</section>
@@ -276,7 +288,18 @@ $(document).ready(function() {
 	});
 });
 </script>
-
+<script>
+$(function(){
+	if("?completed=true" == location.search) {
+		$("#completed").addClass("active");
+		$("#successAnimation").addClass("animated");
+	}
+	$('#close').click(function(){
+		$("#completed").animate({opacity: '0'},500);
+		$('#completed').hide(500);
+	});
+});
+</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134694037-1"></script>
 <script>
