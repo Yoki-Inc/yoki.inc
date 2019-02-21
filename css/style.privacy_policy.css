@@ -1,0 +1,28 @@
+#content {
+	margin-top: 70px;
+}
+p.head {
+	border-bottom: 3px solid #000;
+}
+@media (min-width: 768px) {
+	p.head {
+		display: inline-block;
+	}
+}
+p.address {
+	background-color: #efefef;
+	padding: 10px 30px;
+	line-height: 1em;
+	border-radius: 5px;
+}
+p.address span {
+	font-size: 0.7em;
+	opacity: 0.7;
+}
+p.address span:first-child {
+	margin: 10px 0 0 0;
+	display: inline-block;
+}
+p.date-updated {
+	text-align: right;
+}
