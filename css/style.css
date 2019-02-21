@@ -405,10 +405,10 @@ section#products .box h2 span {
 }
 @media (min-width: 768px) {
 	section#products .box#haco {
-		padding-right: 15px;
+		padding-right: 50px;
 	}
 	section#products .box#hacrew {
-		padding-left: 15px;
+		padding-left: 50px;
 	}
 	section#products .box h2 span {
 		display: block;
