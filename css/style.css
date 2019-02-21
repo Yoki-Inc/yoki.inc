@@ -101,25 +101,24 @@ section {
 	transition: .3s;
 }
 /** H1 TAG **/
-@media (min-width: 768px) {
-	h1 {
-		position: relative;
-	}
-	h1:after {
-		background: linear-gradient(transparent 70%, #10CBCE 0%);
-		content: "";
-		width: 100%;
-		position: absolute;
-		left: 0;
-		height: 57px;
-		z-index: -9;
-	}
+h1 {
+	position: relative;
+	padding: 0 5px 0 3px;
+}
+h1:after {
+	background: linear-gradient(transparent 70%, #10CBCE 0%);
+	content: "";
+	width: 100%;
+	position: absolute;
+	left: 0;
+	height: 57px;
+	z-index: -9;
 }
 @media (max-width: 767px) {
-	h1 span {
+	section#mission h1 span {
 		position: relative;
 	}
-	h1 span:after {
+	section#mission h1 span:after {
 		background: linear-gradient(transparent 70%, #10CBCE 0%);
 		content: "";
 		width: 100%;
@@ -127,6 +126,9 @@ section {
 		left: 0;
 		height: 57px;
 		z-index: -9;
+	}
+	section#mission h1:after {
+		display: none;
 	}
 }
 /** 
