@@ -35,12 +35,11 @@
 					<li><a class="toggle" href="#contact" class="last">CONTACT</a></li>
 				</ul>
 			</nav>
-			<a class="menu-trigger">
-			  <span></span>
-			  <span></span>
-			  <span></span>
+			<a class="m-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
 			</a>
-			<!-- <div id="toggle" class="toggle" ><i class="im im-menu-dot-h"></i></div> -->
 		</div>
 	</header>
 	<section id="top">
@@ -237,7 +236,12 @@ $(document).ready(function(){
 $(function(){
   if (window.matchMedia('(max-width:767px)').matches) {
 		$(function(){
-			$('.toggle').click(function(){
+			$('.m-toggle').click(function(){
+				if ($('.m-toggle').hasClass('active')) {
+					$('.m-toggle').removeClass('active')
+				} else {
+					$('.m-toggle').addClass('active')
+				}
 				$("nav").fadeToggle();
 			});
 		});
