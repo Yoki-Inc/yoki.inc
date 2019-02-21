@@ -247,14 +247,6 @@ header #toggle .im {
 /** 
 		#top
 					**/
-section#top {
-	height: 80vh;
-	position: relative;
-	background-image: url(../assets/top-bg.jpg);
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
 section#top:after {
 	height: 100%;
 	width: 100%;
@@ -264,19 +256,20 @@ section#top:after {
 	content: "";
 	background-color: rgba(255,255,255,0.15);
 }
-section#top .top-bg {
-	display: none
+section#top img.top-bg {
+	width: 100%;
 }
 @media (max-width: 662px) {
 	section#top {
-		height: auto;
-		width: 100%;
-		background: none;
+		height: 500px;
+		position: relative;
+		background-image: url(../assets/top-bg.jpg);
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 	section#top .top-bg {
-		display: block;
-		width: 100%;
-		height: auto;
+		display: none;
 	}
 }
 /** 
