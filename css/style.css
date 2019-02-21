@@ -387,15 +387,6 @@ section#products img {
 section#products .box h2 {
 	color: #6B43E0;
 }
-section#products .box h2 span {
-	font-size: 0.5em;
-	opacity: 0.7;
-}
-@media (max-width: 575px) {
-	section#products .box h2 span {
-		display: block;
-	}
-}
 @media (max-width: 767px) {
 	section#products .box {
 		width: 100%;
@@ -409,14 +400,6 @@ section#products .box h2 span {
 	}
 	section#products .box#hacrew {
 		padding-left: 50px;
-	}
-	section#products .box h2 span {
-		display: block;
-	}
-}
-@media (min-width: 992px) {
-	section#products .box h2 span {
-		display: inline-block;
 	}
 }
 /**
