@@ -264,9 +264,15 @@ section#top img.top-bg {
 		height: 500px;
 		position: relative;
 		background-image: url(../assets/top-bg.jpg);
-		background-position: center top;
+		background-position-y: top;
+		background-position: left;
 		background-repeat: no-repeat;
 		background-size: cover;
+		transition: 60s linear;
+	}
+	section#top.active {
+		background-position: right;
+		transition: 60s linear;
 	}
 	section#top .top-bg {
 		display: none;

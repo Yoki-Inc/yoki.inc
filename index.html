@@ -202,6 +202,11 @@
 		</ul> 
 	</footer>
 </body>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("section#top").css('background-position','right')
+});
+</script>
 <script>
 $(document).ready(function(){
 	$(window).scroll(function() {
@@ -244,7 +249,7 @@ $(document).ready(function() {
 		var completion = windowPos / (docHeight - windowHeight);
 		
 	if (docHeight <= windowHeight) {
-	  $('#progress').width(windowWidth);
+		$('#progress').width(windowWidth);
 	} else {
 		$('#progress').width(completion * windowWidth);
 	}
