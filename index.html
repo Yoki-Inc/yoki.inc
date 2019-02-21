@@ -19,6 +19,7 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	</head>
 <body>
+	<div id="progress"></div>
 	<header id="header">
 		<div class="container" style="position: relative;">
 			<a href="#">
@@ -195,11 +196,11 @@
 				<input type="hidden" name="orgid" value="00D6F000002VY7U">
 				<input type="hidden" name="retURL" value="https://yoki-jp.com">
 				<label for="company">貴社名</label><input id="company" maxlength="80" name="company" type="text" placeholder="株式会社Yoki"><br>
-				<label for="name">ご担当者様(必須)</label><input id="name" maxlength="80" name="name" type="text" required="" placeholder="与喜 太郎"><br>
-				<label for="email">メールアドレス(必須)</label><input id="email" maxlength="80" name="email" type="text" required="" placeholder="hi@example.com"><br>
-				<label for="phone">電話</label><input id="phone" maxlength="40" name="phone" type="text" placeholder="050-5216-9687"><br>
-				<label for="description">お問い合わせ内容</label><textarea name="description" class="czr-focusable"></textarea><br>
-				<input type="submit" name="submit" value="私たちに送る" placeholder="hi@example.com">
+				<label for="name">ご担当者様(必須)</label><input id="name" maxlength="80" name="name" type="text" placeholder="与喜 太郎" required><br>
+				<label for="email">メールアドレス(必須)</label><input id="email" maxlength="80" name="email" type="email" required="" placeholder="hi@example.com" required><br>
+				<label for="phone">電話</label><input id="phone" maxlength="40" name="phone" type="tel" placeholder="050-5216-9687"><br>
+				<label for="description">お問い合わせ内容</label><textarea name="description" class="czr-focusable" required></textarea><br>
+				<input type="submit" name="submit" value="私たちに送る">
 			</form>
 		</div>
 	</section>
@@ -210,19 +211,18 @@
 			<li><a href="https://twitter.com/Yoki_Inc"><i class="im im-twitter"></i></a></li>
 			<li><a href="https://instagram.com/yoki_inc/"><i class="im im-instagram"></i></a></li>
 			<li><a href="https://www.youtube.com/channel/UCt8_BZFX_t7FQnHE9Pcb1QQ"><i class="im im-youtube"></i></a></li>
-		</ul>
+		</ul> 
 	</footer>
-
 </body>
 <script>
 $(document).ready(function(){
-  $(window).scroll(function() {
-    if($(this).scrollTop() > $("#top").height()) {
-      $("header").addClass('active')
-    } else {
-      $("header").removeClass('active')
-    }
-  });
+	$(window).scroll(function() {
+		if($(this).scrollTop() > $("#top").height()) {
+			$("header").addClass('active')
+		} else {
+			$("header").removeClass('active')
+		}
+	});
 });
 </script>
 <script>
@@ -245,13 +245,32 @@ $('a[href^="#"]').click(function() {
 	return false;
 });
 </script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $(window).on('load scroll', function() {
+        var docHeight = $(document).height();
+        var windowPos = $(window).scrollTop();
+        var windowHeight = $(window).height();
+    	var windowWidth = $(window).width();
+        var completion = windowPos / (docHeight - windowHeight);
+        
+    if (docHeight <= windowHeight) {
+      $('#progress').width(windowWidth);
+    } else {
+        $('#progress').width(completion * windowWidth);
+    }
+    
+    });
+});
+</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134694037-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-134694037-1');
 </script>
 </html>
