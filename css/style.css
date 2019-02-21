@@ -31,6 +31,10 @@ p {
 section {
 	margin-bottom: 50px;
 }
+a {
+	text-decoration: underline;
+	color: initial;
+}
 /** Container **/
 .container {
 	box-sizing: border-box;
@@ -627,6 +631,10 @@ section#about-us table td {
 section#contact .form-container {
 	width: 60%;
 }
+section#contact p {
+	margin-top: 0;
+	opacity: 0.7;
+}
 section#contact label {
 	display: block;
 	font-size: 20px;
@@ -742,13 +750,13 @@ footer ul li a:hover .im {
 	display: none;
 	width: 100vw;
 	height: 100vh;
-	z-index: 999;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: none;
-    position: fixed;
-    background-color: rgba(255,255,255,0.7);
+	z-index: 99;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: none;
+	position: fixed;
+	background-color: rgba(255,255,255,0.7);
 }
 #completed.active {
 	display: flex;
@@ -762,8 +770,8 @@ footer ul li a:hover .im {
 #completed p {
 	margin-top: 0;
 	margin-bottom: 15px;
-    text-align: center;
-    line-height: 1.2em;
+	text-align: center;
+	line-height: 1.2em;
 }
 #completed button {
 	z-index: 100;
@@ -777,136 +785,135 @@ footer ul li a:hover .im {
 	padding: 10px 30px;
 	position: absolute;
 	-webkit-transform: translateX(-50%);
-	      transform: translateX(-50%);
+	transform: translateX(-50%);
 	transition: .3s opacity;
 }
-#completed button:active,
-#completed button:hover {
+#completed button:active, button:hover {
 	opacity: 0.7;
 	transition: .3s opacity;
 }
 #successAnimationResult {
-    fill: green!important;
+	fill: green!important;
 }
 #successAnimationCheck {
-    stroke: green!important;
+	stroke: green!important;
 }
 #successAnimationCircle {
 	stroke: green!important;
 }
 @-webkit-keyframes scaleAnimation {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(1.5);
+		transform: scale(1.5);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
 }
 @keyframes scaleAnimation {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(1.5);
+		transform: scale(1.5);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
 }
 @-webkit-keyframes drawCircle {
-  0% {
-    stroke-dashoffset: 151px;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
+	0% {
+		stroke-dashoffset: 151px;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
 }
 @keyframes drawCircle {
-  0% {
-    stroke-dashoffset: 151px;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
+	0% {
+		stroke-dashoffset: 151px;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
 }
 @-webkit-keyframes drawCheck {
-  0% {
-    stroke-dashoffset: 36px;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
+	0% {
+		stroke-dashoffset: 36px;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
 }
 @keyframes drawCheck {
-  0% {
-    stroke-dashoffset: 36px;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
+	0% {
+		stroke-dashoffset: 36px;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
 }
 @-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 @keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 @-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 #successAnimationCircle {
-  stroke-dasharray: 151px 151px;
-  stroke: #fff;
+	stroke-dasharray: 151px 151px;
+	stroke: #fff;
 }
 #successAnimationCheck {
-  stroke-dasharray: 36px 36px;
-  stroke: #fff;
+	stroke-dasharray: 36px 36px;
+	stroke: #fff;
 }
 #successAnimationResult {
-  fill: #fff;
-  opacity: 0;
+	fill: #fff;
+	opacity: 0;
 }
 #successAnimation.animated {
-  -webkit-animation: 1s ease-out 0s 1 both scaleAnimation;
-          animation: 1s ease-out 0s 1 both scaleAnimation;
+	-webkit-animation: 1s ease-out 0s 1 both scaleAnimation;
+			animation: 1s ease-out 0s 1 both scaleAnimation;
 }
 #successAnimation.animated #successAnimationCircle {
-  -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle, 0.3s linear 0.9s 1 both fadeOut;
-          animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle, 0.3s linear 0.9s 1 both fadeOut;
+	-webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle, 0.3s linear 0.9s 1 both fadeOut;
+			animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle, 0.3s linear 0.9s 1 both fadeOut;
 }
 #successAnimation.animated #successAnimationCheck {
-  -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck, 0.3s linear 0.9s 1 both fadeOut;
-          animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck, 0.3s linear 0.9s 1 both fadeOut;
+	-webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck, 0.3s linear 0.9s 1 both fadeOut;
+			animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck, 0.3s linear 0.9s 1 both fadeOut;
 }
 #successAnimation.animated #successAnimationResult {
-  -webkit-animation: 0.3s linear 0.9s both fadeIn;
-          animation: 0.3s linear 0.9s both fadeIn;
+	-webkit-animation: 0.3s linear 0.9s both fadeIn;
+			animation: 0.3s linear 0.9s both fadeIn;
 }
