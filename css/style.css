@@ -1,5 +1,5 @@
 /**
-	common settings 
+		COMMON CSS
 					**/
 html, body {
 	padding:0;
@@ -19,27 +19,19 @@ h2 {
 }
 p {
 	font-size: 20px;
-	letter-spacing: 0.06em;
-    line-height: 1.7em;
-    text-align: justify;
+	line-height: 1.7em;
+	text-align: justify;
 }
 @media (max-width: 575px) {
 	p {
 		letter-spacing: 0em;
-	    text-align: left;
+		text-align: left;
 	}
 }
 section {
 	margin-bottom: 50px;
 }
-.lead {
-	width: 100%;
-}
-.lead h1 {
-	padding: 0 5px 4px 5px;
-	line-height: 1em;
-	background: linear-gradient(transparent 70%, #10CBCE 0%);
-}
+/** Container **/
 .container {
 	box-sizing: border-box;
 	width: 100%;
@@ -72,6 +64,7 @@ section {
 .column-container {
 	clear: both;
 }
+/** Button **/
 .btn {
 	display: inline-block;
 	text-align: center;
@@ -89,10 +82,10 @@ section {
 	transition: all .3s;
 }
 .btn:hover {
-	background: #00253A;;
+	background: #00253A;
 	color: #fff;
 	transition: .3s;
-	border: 2px solid #333;
+	border: 2px solid #00253A;
 }
 .btn:hover .im {
 	color: #fff;
@@ -105,6 +98,51 @@ section {
 	font-size: inherit;
 	color: initial;
 	transition: .3s;
+}
+/** H1 TAG **/
+.lead {
+	width: 100%;
+}
+h1 {
+	position: relative;
+	padding: 0 5px 0 3px;
+}
+h1:after {
+	background: linear-gradient(transparent 70%, #10CBCE 0%);
+	content: "";
+	width: 100%;
+	position: absolute;
+	left: 0;
+	height: 57px;
+	z-index: -9;
+}
+@media (max-width: 767px) {
+	section#mission h1 span {
+		position: relative;
+	}
+	section#mission h1 span:after {
+		background: linear-gradient(transparent 70%, #10CBCE 0%);
+		content: "";
+		width: 100%;
+		position: absolute;
+		left: 0;
+		height: 57px;
+		z-index: -9;
+	}
+	section#mission h1:after {
+		display: none;
+	}
+}
+/** 
+	PROGRESS BAR
+					**/
+#progress {
+	height: 3px;
+	background-color: rgb(0, 36, 59);
+	position: fixed;
+	bottom: 0;
+	top: 0;
+	z-index: 999;
 }
 /** 
 		HEADER
@@ -123,8 +161,8 @@ header img.logo {
 	width: 30px;
 	height: auto;
 	position: absolute;
-    left: 30px;
-    top: 20px;
+	left: 30px;
+	top: 20px;
 }
 header a {
 	text-decoration: none;
@@ -132,7 +170,7 @@ header a {
 }
 header nav {
 	position: absolute;
-    left: 100px;
+	left: 100px;
 }
 header ul {
 	margin: 0;
@@ -140,18 +178,51 @@ header ul {
 }
 header ul li {
 	line-height: 70px;
-    display: inline-block;
-    margin-right: 25px;
+	display: inline-block;
+	margin-right: 25px;
 }
-header #toggle {
+header .m-toggle,
+header .m-toggle span {
 	display: none;
+	transition: all .4s;
+	box-sizing: border-box;
 }
-header #toggle .im {
+header .m-toggle {
 	position: absolute;
-	font-size: 30px;
-    top: 20px;
-    right: 30px;
+	width: 22px;
+	height: 15px;
+	top: 30px;
+	right: 30px;
 }
+header .m-toggle span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	border-radius: 4px;
+}
+header .m-toggle span:nth-of-type(1) {
+	top: 0;
+}
+header .m-toggle span:nth-of-type(2) {
+	top: 6px;
+}
+header .m-toggle span:nth-of-type(3) {
+	bottom: 0;
+}
+header .m-toggle.active span:nth-of-type(1) {
+	-webkit-transform: translateY(7px) rotate(-45deg);
+	transform: translateY(7px) rotate(-45deg);
+}
+header .m-toggle.active span:nth-of-type(2) {
+	opacity: 0;
+}
+header .m-toggle.active span:nth-of-type(3) {
+	-webkit-transform: translateY(-5px) rotate(45deg);
+	transform: translateY(-5px) rotate(45deg);
+}
+
 @media (min-width: 768px) {
 	header nav ul li a {
 		transition: .3s opacity;
@@ -198,9 +269,9 @@ header #toggle .im {
 		border-bottom: 5px solid #000;
 		content: "";
 	}
-	header #toggle {
-		display: block;
-		float: right;
+	header .m-toggle,
+	header .m-toggle span {
+		display: inline-block;
 	}
 }
 @media (max-width: 370px) {
@@ -212,12 +283,8 @@ header #toggle .im {
 		#top
 					**/
 section#top {
-	height: 80vh;
 	position: relative;
-	background-image: url(../assets/top-bg.jpg);
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-position: center;
 }
 section#top:after {
 	height: 100%;
@@ -228,19 +295,40 @@ section#top:after {
 	content: "";
 	background-color: rgba(255,255,255,0.15);
 }
-section#top .top-bg {
-	display: none
+section#top img.top-bg {
+	width: 100%;
 }
 @media (max-width: 662px) {
 	section#top {
-		height: auto;
-		width: 100%;
-		background: none;
+		height: 500px;
+		position: relative;
+		background-image: url(../assets/top-bg.jpg);
+		background-position-y: top;
+		background-position: left;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: 60s linear;
+	}
+	section#top.active {
+		background-position: right;
+		transition: 60s linear;
 	}
 	section#top .top-bg {
-		display: block;
-		width: 100%;
-		height: auto;
+		display: none;
+	}
+}
+@media (min-width: 1200px) {
+	section#top {
+		height: 90vh;
+		position: relative;
+		background-image: url(../assets/top-bg.jpg);
+		background-position-y: bottom;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	section#top .top-bg {
+		display: none;
 	}
 }
 /** 
@@ -249,17 +337,19 @@ section#top .top-bg {
 section#mission h1 {
 	font-size: 50px!important;
 }
+section#mission h1:after {
+	top: 10px;
+}
 section#mission h1 br {
 	display: none;
 }
 section#mission p {
+	letter-spacing: 0.015em;
 	font-size: 23px!important;
 	margin: 30px 0;
 }
 section#mission p span {
-    display: block;
-    margin: 7px 0;
-    color: #6B43E0;
+	display: block;
 }
 @media (max-width: 767px) {
 	section#mission h1 {
@@ -276,7 +366,7 @@ section#mission p span {
 	section#mission h1 {
 		background: none;
 		font-size: 50px!important;
-    	line-height: 1.3em;
+		line-height: 1.3em;
 	}
 	section#mission h1 br {
 		display: inline;
@@ -290,27 +380,12 @@ section#products .box {
 	box-sizing: border-box;
 	float: left;
 }
-section#products .box#haco {
-	padding-right: 10px;
-}
-section#products .box#hacrew {
-	padding-left: 10px;
-}
 section#products img {
 	width: 100%;
 	border-radius: 3px;
 }
 section#products .box h2 {
 	color: #6B43E0;
-}
-section#products .box h2 span {
-	font-size: 0.5em;
-	opacity: 0.7;
-}
-@media (max-width: 575px) {
-	section#products .box h2 span {
-		display: block;
-	}
 }
 @media (max-width: 767px) {
 	section#products .box {
@@ -320,14 +395,11 @@ section#products .box h2 span {
 	}
 }
 @media (min-width: 768px) {
-	section#products .box h2 span {
-		display: block;
+	section#products .box#haco {
+		padding-right: 50px;
 	}
-}
-
-@media (min-width: 992px) {
-	section#products .box h2 span {
-		display: inline-block;
+	section#products .box#hacrew {
+		padding-left: 50px;
 	}
 }
 /**
@@ -337,18 +409,14 @@ section#board h2 {
 	margin: 0;
 	font-size: 25px;
 }
-section#board p {
-	font-size: 16px;
-}
 section#board br {
 	display: none;
 }
 section#board .column-container {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 section#board .column-container .left-column {
 	width: 20%;
-/*	min-width: 200px;*/
 	float: left;
 }
 section#board .column-container .right-column {
@@ -360,10 +428,10 @@ section#board .column-container .right-column {
 section#board .column-container .profile-link {
 	vertical-align: middle;
 	padding-left: 15px;
-	font-size: : 23px;
+	font-size: 23px;
 	line-height: 25px;
 	vertical-align: middle;
-    display: inline-block;
+	display: inline-block;
 }
 section#board .column-container .profile-link .im {
 	margin-left: 0;
@@ -391,6 +459,11 @@ section#board .column-container img {
 	height: auto;
 	border-radius: 3px;
 }
+@media (max-width: 1199px) {
+	section#board p {
+		font-size: 16px;
+	}
+}
 @media (max-width: 575px) {
 	section#board br {
 		display: block;
@@ -403,12 +476,11 @@ section#board .column-container img {
 		margin-bottom: 50px;
 	}
 	section#board .column-container {
-	    margin-bottom: 20px;
+		margin-bottom: 20px;
 	}
 	section#board .column-container span.role {
 		opacity: 0.65;
-	    font-size: 0.75em;
-	    line-height: 0em;
+		font-size: 0.75em;
 	}
 	section#board .column-container .left-column {
 		width: 50%;
@@ -438,6 +510,11 @@ section#board .column-container img {
 	}
 	section#board .column-container .right-column .profile-link a:last-child {
 		margin-left: 5px;
+	}
+}
+@media (max-width: 767px) {
+	section#board .column-container .right-column p {
+		margin-top: 5px;
 	}
 }
 @media (min-width: 576px) {
@@ -470,6 +547,7 @@ section#board .column-container img {
 		width: 80%;
 	}
 }
+
 /**
 		#recruit 
 					**/
@@ -506,8 +584,10 @@ section#recruit a.btn .im {
 }
 @media (max-width: 767px) {
 	section#recruit .wework img {
-		width:100%;
-		padding: 10px;
+		width: 100%;
+		border-radius: 5px;
+		margin: 10px 0;
+		padding: 0;
 		float: left;
 	}
 }
@@ -529,12 +609,12 @@ section#about-us table , td, th {
 section#about-us table th {
 	vertical-align: top;
 	padding: 12px 30px;
-    width: 30%;
+	width: 30%;
 }
 section#about-us table td {
 	width: 70%;
 	line-height: 1.5em;
-    padding: 10px;
+	padding: 10px;
 }
 @media (max-width: 575px) {
 	section#about-us table th {
@@ -544,53 +624,75 @@ section#about-us table td {
 /**
 		#about-us 
 					**/
-section#contact label {
-    display: block;
-    font-size: 20px;
-    line-height: 2em;
-}
-section#contact input[type="text"], textarea {
+section#contact .form-container {
 	width: 60%;
-    font-size: 20px;
-    padding: 0 10px;
-    margin-bottom: 15px;
-    font-weight: bold;
-    font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
-    border: 1px solid #dfdfdf;
 }
-section#contact input[type="text"]:focus, textarea:focus {
-    border: 1px solid #313743;
-    outline: 0;
+section#contact label {
+	display: block;
+	font-size: 20px;
+	line-height: 2em;
 }
-section#contact input[type="text"] {
-    height: 50px;
+section#contact input,
+section#contact textarea,
+section#contact button {
+	width: 100%;
+	font-size: 20px;
+	padding: 0 10px;
+	margin-bottom: 15px;
+	font-weight: bold;
+	font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
+	border: 1px solid #dfdfdf;
+}
+section#contact input:focus, textarea:focus, button:focus {
+	border: 1px solid #00253A;
+	outline: 0;
+}
+section#contact input {
+	height: 50px;
 }
 section#contact textarea {
 	height: 200px;
+	padding: 10px;
 }
-section#contact input[type="submit"] {
+section#contact .agreement {
+	width: 103%;
+	text-align: center;
+}
+section#contact .agreement span {
+	text-align: center;
+	font-size: 11px;
+	color: #313743;
+	font-weight: normal;
+}
+section#contact .agreement span a {
+	color: inherit;
+}
+section#contact button {
 	display: inline-block;
-	width: 62%;
+	width: 103%;
 	font-size: 20px;
 	text-align: center;
 	cursor: pointer;
 	padding: 10px 40px;
 	background: #fff;
-	color: #313743;
-    font-weight: bold;
-    font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
+	color: #00253A;
+	font-weight: bold;
+	font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
 	line-height: 1em;
 	transition: .3s;
-	border: 2px solid #313743;
+	border: 2px solid #00253A;
 }
-section#contact input[type="submit"]:hover {
-	background: #313743;
+section#contact button:hover {
+	background-color: #00253A;
 	color: #fff;
 	transition: .3s;
-	border: 2px solid #313743;
+	border: 2px solid #00253A;
 }
-@media (max-width: 575px) {
-	section#contact input, textarea {
+section#contact button:hover i {
+	color: #fff;
+}
+@media (max-width: 767px) {
+	section#contact .form-container {
 		width: 100%!important;
 		box-sizing: border-box;
 	}
@@ -619,8 +721,8 @@ footer ul {
 	bottom: 10px;
 }
 footer ul li {
-    display: inline-block;
-    margin-right: 5px;
+	display: inline-block;
+	margin-right: 5px;
 }
 footer ul li .im {
 	color: #fff;
@@ -632,4 +734,179 @@ footer ul li .im {
 footer ul li a:hover .im {
 	opacity: 0.8;
 	transition: 0.3s opacity;
+}
+/**
+	  Completed Modal
+						**/
+#completed {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	z-index: 999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: none;
+    position: fixed;
+    background-color: rgba(255,255,255,0.7);
+}
+#completed.active {
+	display: flex;
+}
+#completed svg {
+	width: 15%;
+	min-width: 300px;
+	height: auto;
+	color: #000;
+}
+#completed p {
+	margin-top: 0;
+	margin-bottom: 15px;
+    text-align: center;
+    line-height: 1.2em;
+}
+#completed button {
+	z-index: 100;
+	background: #000;
+	border: 0;
+	border-radius: 3px;
+	bottom: 100px;
+	color: #fff;
+	left: 50%;
+	outline: 0;
+	padding: 10px 30px;
+	position: absolute;
+	-webkit-transform: translateX(-50%);
+	      transform: translateX(-50%);
+	transition: .3s opacity;
+}
+#completed button:active,
+#completed button:hover {
+	opacity: 0.7;
+	transition: .3s opacity;
+}
+#successAnimationResult {
+    fill: green!important;
+}
+#successAnimationCheck {
+    stroke: green!important;
+}
+#successAnimationCircle {
+	stroke: green!important;
+}
+@-webkit-keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 151px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 151px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 36px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 36px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#successAnimationCircle {
+  stroke-dasharray: 151px 151px;
+  stroke: #fff;
+}
+#successAnimationCheck {
+  stroke-dasharray: 36px 36px;
+  stroke: #fff;
+}
+#successAnimationResult {
+  fill: #fff;
+  opacity: 0;
+}
+#successAnimation.animated {
+  -webkit-animation: 1s ease-out 0s 1 both scaleAnimation;
+          animation: 1s ease-out 0s 1 both scaleAnimation;
+}
+#successAnimation.animated #successAnimationCircle {
+  -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle, 0.3s linear 0.9s 1 both fadeOut;
+          animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle, 0.3s linear 0.9s 1 both fadeOut;
+}
+#successAnimation.animated #successAnimationCheck {
+  -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck, 0.3s linear 0.9s 1 both fadeOut;
+          animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck, 0.3s linear 0.9s 1 both fadeOut;
+}
+#successAnimation.animated #successAnimationResult {
+  -webkit-animation: 0.3s linear 0.9s both fadeIn;
+          animation: 0.3s linear 0.9s both fadeIn;
 }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="generator" content="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="generator" content="">
 
 		<title>Yoki Inc.｜株式会社Yoki</title>
 
@@ -19,6 +19,16 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	</head>
 <body>
+	<div id="completed">
+		<svg id="successAnimation" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+			<path id="successAnimationResult" d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"/>
+			<circle id="successAnimationCircle" cx="35" cy="35" r="24"  stroke-width="2" stroke-linecap="round" fill="transparent"/>
+			<polyline id="successAnimationCheck"  stroke-width="2" points="23 34 34 43 47 27" fill="transparent"/>
+		</svg>
+		<p>お問い合わせを正しく承りました。通常3営業日以内にご回答いたしますが、内容によってはご回答を控えさせて頂く場合もございます。予めご了承ください。</p>
+		<button id="close">とじる</button>
+	</div>
+	<div id="progress"></div>
 	<header id="header">
 		<div class="container" style="position: relative;">
 			<a href="#">
@@ -34,7 +44,11 @@
 					<li><a class="toggle" href="#contact" class="last">CONTACT</a></li>
 				</ul>
 			</nav>
-			<div id="toggle" class="toggle" ><i class="im im-menu-dot-h"></i></div>
+			<a class="m-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
 		</div>
 	</header>
 	<section id="top">
@@ -42,9 +56,7 @@
 	</section>
 	<section id="mission">
 		<div class="container">
-			<div class="lead">
-				<h1>優しい<br>情報端末を<br>つくる</h1>
-			</div>
+			<h1><span>優しい</span><br><span>情報端末を</span><br><span>つくる</span></h1>
 			<p>「”知の自転車”を創る」とスティーブジョブズは言った。</p>
 			<p>肉体的な能力を最大限に発揮させた自転車のように、<br>
 			人の知的な能力を最大限に発揮させる知の自転車をつくる。</p>
@@ -59,7 +71,7 @@
 			<p>効率化、高速化をする情報端末ではなく、<br>
 			感情ベースでつながることができる優しい情報端末をつくる。</p>
 
-			<a href="#" class="btn">会社案内資料で詳しく見る<i class="im im-external-link"></i></a>
+			<a href="#" class="btn" target="_blank">会社案内資料で詳しく見る<i class="im im-external-link"></i></a>
 		</div>
 	</section>
 	<section id="products">
@@ -69,13 +81,13 @@
 			</div>
 			<div class="box" id="haco">
 				<img src="assets/haco.jpg" class="product">
-				<h2>HACO <span>いちから作れるロボット。</span></h2>
+				<h2>HACO</h2>
 				<p>レーザーカッターでカットされたパーツで構成されています。コンピューターボードはRaspberry Piでソフトウェアの多くがオープンソースです。汎用的な部品で構成されており、誰もがカスタマイズすることができます。</p>
 				<a href="#" class="btn">HACOについて詳しく見る<i class="im im-external-link"></i></a>
 			</div>
 			<div class="box" id="hacrew">
 				<img src="assets/hacrew.jpg" class="product">
-				<h2>HACREW <span>誰でも使えるHACOのための開発環境。</span></h2>
+				<h2>HACREW</h2>
 				<p>誰もが使えるHACO用のソフトウェア開発環境です。ブロックプログラミングとテキストプログラミングを組み合わせているのが特徴で、ブロックで簡単にプログラムを組むこもできるし、テキストで一般的なコーディングをすることもできます。</p>
 				<a href="#" class="btn">HACREWについて詳しく見る<i class="im im-external-link"></i></a>
 			</div>
@@ -91,15 +103,15 @@
 				<div class="left-column column">
 					<img src="assets/fuma_higashide.jpg">
 					<div class="profile-link">
-						<a href="https://twitter.com/fumah815"><i class="im im-twitter"></i></a>
-						<a href="https://m.me/fumah815"><i class="im im-facebook-messenger"></i></a>
+						<a href="https://twitter.com/fumah815" target="_blank"><i class="im im-twitter"></i></a>
+						<a href="https://m.me/fumah815" target="_blank"><i class="im im-facebook-messenger"></i></a>
 					</div>
 				</div>
 				<div class="right-column column">
 					<h2><span class="role">代表取締役CEO</span><br>   東出風馬
 						<span class="profile-link">
-							<a href="https://twitter.com/fumah815"><i class="im im-twitter"></i></a>
-							<a href="https://m.me/fumah815"><i class="im im-facebook-messenger"></i></a>
+							<a href="https://twitter.com/fumah815" target="_blank"><i class="im im-twitter"></i></a>
+							<a href="https://m.me/fumah815" target="_blank"><i class="im im-facebook-messenger"></i></a>
 						</span>
 					</h2>
 					<p>中学2年時に現在のYokiの事業を着想し、2016年秋、高校2年のときに東京都主催の「TOKYO STARTUP GATEWAY」に応募。テーマ「能動的かつ直感的なロボットで今までの情報端末の限界を超える。」で優秀賞を受賞。2017年2月、株式会社Yokiを創業し代表取締役に就任。</p>
@@ -110,15 +122,15 @@
 				<div class="left-column column">
 					<img src="assets/naoki_shirahige.jpg">
 					<div class="profile-link">
-						<a href="https://twitter.com/_naonosuke"><i class="im im-twitter"></i></a>
-						<a href="https://m.me/naonosuke.jp"><i class="im im-facebook-messenger"></i></a>
+						<a href="https://twitter.com/_naonosuke" target="_blank"><i class="im im-twitter"></i></a>
+						<a href="https://m.me/naonosuke.jp" target="_blank"><i class="im im-facebook-messenger"></i></a>
 					</div>
 				</div>
 				<div class="right-column column">
 					<h2><span class="role">取締役COO</span><br>   白髭直樹
 						<span class="profile-link">
-							<a href="https://twitter.com/_naonosuke"><i class="im im-twitter"></i></a>
-							<a href="https://m.me/naonosuke.jp"><i class="im im-facebook-messenger"></i></a>
+							<a href="https://twitter.com/_naonosuke" target="_blank"><i class="im im-twitter"></i></a>
+							<a href="https://m.me/naonosuke.jp" target="_blank"><i class="im im-facebook-messenger"></i></a>
 						</span>
 					</h2>
 					<p>フリーランサー，ITベンチャー，教育団体代表等を経て，事業型教育系NPOに移り，事業企画を担い事業業績の立て直しに奔走。おおよそ1年で事業単体のV字回復を果たした。2018年5月より株式会社Yokiに参画し開発部門ディレクターを経て現職。現在も教育活動に従事し，一般社団法人CRoots 理事など。</p>
@@ -188,19 +200,27 @@
 	</section>
 	<section id="contact">
 		<div class="container">
-			<div class="lead">
-				<h1>お問い合わせ</h1>
+			<div class="form-container">
+				<div class="lead">
+					<h1>お問い合わせ</h1>
+				</div>
+				<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="czr-focus">
+					<input type="hidden" name="orgid" value="00D6F000002VY7U">
+					<input type="hidden" name="retURL" value="https://yoki-jp.com?completed=true">
+					<input type="hidden" name="00N6F00000JRVuz" value="yoki-jp.com">
+					<label for="company">貴社名</label><input id="company" maxlength="80" name="company" type="text" placeholder="株式会社Yoki"><br>
+					<label for="name">ご担当者様(必須)</label><input id="name" maxlength="80" name="name" type="text" placeholder="与喜 太郎" required><br>
+					<label for="email">メールアドレス(必須)</label><input id="email" maxlength="80" name="email" type="email" required="" placeholder="hi@example.com" required><br>
+					<label for="phone">電話</label><input id="phone" maxlength="40" name="phone" type="tel" placeholder="050-5216-9687"><br>
+					<label for="description">お問い合わせ内容(必須)</label><textarea name="description" class="czr-focusable" required></textarea><br>
+					<div class="agreement">
+						<span>*この登録により、私は<a href="https://yoki-jp.com/legal">プライバシーポリシー</a>を読み、同意したことを表明します。</span>
+					</div>
+					<button type="submit">
+						私たちに送る<i class="im im-smiley-o"></i>
+					</button>
+				</form>
 			</div>
-			<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="czr-focus">
-				<input type="hidden" name="orgid" value="00D6F000002VY7U">
-				<input type="hidden" name="retURL" value="https://yoki-jp.com">
-				<label for="company">貴社名</label><input id="company" maxlength="80" name="company" type="text" placeholder="株式会社Yoki"><br>
-				<label for="name">ご担当者様(必須)</label><input id="name" maxlength="80" name="name" type="text" required="" placeholder="与喜 太郎"><br>
-				<label for="email">メールアドレス(必須)</label><input id="email" maxlength="80" name="email" type="text" required="" placeholder="hi@example.com"><br>
-				<label for="phone">電話</label><input id="phone" maxlength="40" name="phone" type="text" placeholder="050-5216-9687"><br>
-				<label for="description">お問い合わせ内容</label><textarea name="description" class="czr-focusable"></textarea><br>
-				<input type="submit" name="submit" value="私たちに送る" placeholder="hi@example.com">
-			</form>
 		</div>
 	</section>
 	<footer>
@@ -210,26 +230,40 @@
 			<li><a href="https://twitter.com/Yoki_Inc"><i class="im im-twitter"></i></a></li>
 			<li><a href="https://instagram.com/yoki_inc/"><i class="im im-instagram"></i></a></li>
 			<li><a href="https://www.youtube.com/channel/UCt8_BZFX_t7FQnHE9Pcb1QQ"><i class="im im-youtube"></i></a></li>
-		</ul>
+		</ul> 
 	</footer>
-
 </body>
+<script type="text/javascript">
+$(function(){
+	if (window.matchMedia('(max-width:662px)').matches) {
+		$(document).ready(function(){
+			$("section#top").css('background-position','right')
+		});
+	} else {
+	}
+});
+</script>
 <script>
 $(document).ready(function(){
-  $(window).scroll(function() {
-    if($(this).scrollTop() > $("#top").height()) {
-      $("header").addClass('active')
-    } else {
-      $("header").removeClass('active')
-    }
-  });
+	$(window).scroll(function() {
+		if($(this).scrollTop() > $("#top").height()) {
+			$("header").addClass('active')
+		} else {
+			$("header").removeClass('active')
+		}
+	});
 });
 </script>
 <script>
 $(function(){
   if (window.matchMedia('(max-width:767px)').matches) {
 		$(function(){
-			$('.toggle').click(function(){
+			$('.m-toggle').click(function(){
+				if ($('.m-toggle').hasClass('active')) {
+					$('.m-toggle').removeClass('active')
+				} else {
+					$('.m-toggle').addClass('active')
+				}
 				$("nav").fadeToggle();
 			});
 		});
@@ -245,13 +279,43 @@ $('a[href^="#"]').click(function() {
 	return false;
 });
 </script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$(window).on('load scroll', function() {
+		var docHeight = $(document).height();
+		var windowPos = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		var windowWidth = $(window).width();
+		var completion = windowPos / (docHeight - windowHeight);
+		
+	if (docHeight <= windowHeight) {
+		$('#progress').width(windowWidth);
+	} else {
+		$('#progress').width(completion * windowWidth);
+	}
+	
+	});
+});
+</script>
+<script>
+$(function(){
+	if("?completed=true" == location.search) {
+		$("#completed").addClass("active");
+		$("#successAnimation").addClass("animated");
+	}
+	$('#close').click(function(){
+		$("#completed").animate({opacity: '0'},500);
+		$('#completed').hide(500);
+	});
+});
+</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134694037-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-134694037-1');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-134694037-1');
 </script>
 </html>
