@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="generator" content="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="generator" content="">
 
 		<title>Yoki Inc.｜株式会社Yoki</title>
 
@@ -248,29 +248,29 @@ $('a[href^="#"]').click(function() {
 
 <script type="text/javascript">
 $(document).ready(function() {
-    $(window).on('load scroll', function() {
-        var docHeight = $(document).height();
-        var windowPos = $(window).scrollTop();
-        var windowHeight = $(window).height();
-    	var windowWidth = $(window).width();
-        var completion = windowPos / (docHeight - windowHeight);
-        
-    if (docHeight <= windowHeight) {
-      $('#progress').width(windowWidth);
-    } else {
-        $('#progress').width(completion * windowWidth);
-    }
-    
-    });
+	$(window).on('load scroll', function() {
+		var docHeight = $(document).height();
+		var windowPos = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		var windowWidth = $(window).width();
+		var completion = windowPos / (docHeight - windowHeight);
+		
+	if (docHeight <= windowHeight) {
+	  $('#progress').width(windowWidth);
+	} else {
+		$('#progress').width(completion * windowWidth);
+	}
+	
+	});
 });
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134694037-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-134694037-1');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-134694037-1');
 </script>
 </html>

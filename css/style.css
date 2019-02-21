@@ -20,13 +20,13 @@ h2 {
 p {
 	font-size: 20px;
 	letter-spacing: 0.015em;
-    line-height: 1.7em;
-    text-align: justify;
+	line-height: 1.7em;
+	text-align: justify;
 }
 @media (max-width: 575px) {
 	p {
 		letter-spacing: 0em;
-	    text-align: left;
+		text-align: left;
 	}
 }
 section {
@@ -134,8 +134,8 @@ header img.logo {
 	width: 30px;
 	height: auto;
 	position: absolute;
-    left: 30px;
-    top: 20px;
+	left: 30px;
+	top: 20px;
 }
 header a {
 	text-decoration: none;
@@ -143,7 +143,7 @@ header a {
 }
 header nav {
 	position: absolute;
-    left: 100px;
+	left: 100px;
 }
 header ul {
 	margin: 0;
@@ -151,8 +151,8 @@ header ul {
 }
 header ul li {
 	line-height: 70px;
-    display: inline-block;
-    margin-right: 25px;
+	display: inline-block;
+	margin-right: 25px;
 }
 header #toggle {
 	display: none;
@@ -160,8 +160,8 @@ header #toggle {
 header #toggle .im {
 	position: absolute;
 	font-size: 30px;
-    top: 20px;
-    right: 30px;
+	top: 20px;
+	right: 30px;
 }
 @media (min-width: 768px) {
 	header nav ul li a {
@@ -268,9 +268,7 @@ section#mission p {
 	margin: 30px 0;
 }
 section#mission p span {
-    display: block;
-    margin: 7px 0;
-    color: #6B43E0;
+	display: block;
 }
 @media (max-width: 767px) {
 	section#mission h1 {
@@ -287,7 +285,7 @@ section#mission p span {
 	section#mission h1 {
 		background: none;
 		font-size: 50px!important;
-    	line-height: 1.3em;
+		line-height: 1.3em;
 	}
 	section#mission h1 br {
 		display: inline;
@@ -355,11 +353,10 @@ section#board br {
 	display: none;
 }
 section#board .column-container {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 section#board .column-container .left-column {
 	width: 20%;
-/*	min-width: 200px;*/
 	float: left;
 }
 section#board .column-container .right-column {
@@ -371,10 +368,10 @@ section#board .column-container .right-column {
 section#board .column-container .profile-link {
 	vertical-align: middle;
 	padding-left: 15px;
-	font-size: : 23px;
+	font-size: 23px;
 	line-height: 25px;
 	vertical-align: middle;
-    display: inline-block;
+	display: inline-block;
 }
 section#board .column-container .profile-link .im {
 	margin-left: 0;
@@ -414,12 +411,11 @@ section#board .column-container img {
 		margin-bottom: 50px;
 	}
 	section#board .column-container {
-	    margin-bottom: 20px;
+		margin-bottom: 20px;
 	}
 	section#board .column-container span.role {
 		opacity: 0.65;
-	    font-size: 0.75em;
-	    line-height: 0em;
+		font-size: 0.75em;
 	}
 	section#board .column-container .left-column {
 		width: 50%;
@@ -449,6 +445,11 @@ section#board .column-container img {
 	}
 	section#board .column-container .right-column .profile-link a:last-child {
 		margin-left: 5px;
+	}
+}
+@media (max-width: 767px) {
+	section#board .column-container .right-column p {
+		margin-top: 5px;
 	}
 }
 @media (min-width: 576px) {
@@ -542,12 +543,12 @@ section#about-us table , td, th {
 section#about-us table th {
 	vertical-align: top;
 	padding: 12px 30px;
-    width: 30%;
+	width: 30%;
 }
 section#about-us table td {
 	width: 70%;
 	line-height: 1.5em;
-    padding: 10px;
+	padding: 10px;
 }
 @media (max-width: 575px) {
 	section#about-us table th {
@@ -558,25 +559,25 @@ section#about-us table td {
 		#about-us 
 					**/
 section#contact label {
-    display: block;
-    font-size: 20px;
-    line-height: 2em;
+	display: block;
+	font-size: 20px;
+	line-height: 2em;
 }
 section#contact input, textarea {
 	width: 60%;
-    font-size: 20px;
-    padding: 0 10px;
-    margin-bottom: 15px;
-    font-weight: bold;
-    font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
-    border: 1px solid #dfdfdf;
+	font-size: 20px;
+	padding: 0 10px;
+	margin-bottom: 15px;
+	font-weight: bold;
+	font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
+	border: 1px solid #dfdfdf;
 }
 section#contact input:focus, textarea:focus {
-    border: 1px solid #313743;
-    outline: 0;
+	border: 1px solid #313743;
+	outline: 0;
 }
 section#contact input {
-    height: 50px;
+	height: 50px;
 }
 section#contact textarea {
 	height: 200px;
@@ -590,8 +591,8 @@ section#contact input[type="submit"] {
 	padding: 10px 40px;
 	background: #fff;
 	color: #313743;
-    font-weight: bold;
-    font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
+	font-weight: bold;
+	font-family: Avenir, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Noto Sans Japanese", "Yu Gothic Bold", "游ゴシック Bold", YuGothic, "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
 	line-height: 1em;
 	transition: .3s;
 	border: 2px solid #313743;
@@ -632,8 +633,8 @@ footer ul {
 	bottom: 10px;
 }
 footer ul li {
-    display: inline-block;
-    margin-right: 5px;
+	display: inline-block;
+	margin-right: 5px;
 }
 footer ul li .im {
 	color: #fff;
