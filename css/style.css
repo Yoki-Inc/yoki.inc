@@ -181,55 +181,46 @@ header ul li {
 	display: inline-block;
 	margin-right: 25px;
 }
-header #toggle {
-	display: none;
-}
-header #toggle .im {
-	position: absolute;
-	font-size: 30px;
-	top: 20px;
-	right: 30px;
-}
 header .m-toggle,
 header .m-toggle span {
-  display: inline-block;
-  transition: all .4s;
-  box-sizing: border-box;
+	display: none;
+	transition: all .4s;
+	box-sizing: border-box;
 }
 header .m-toggle {
-    position: absolute;
-    width: 22px;
-    height: 15px;
-    top: 30px;
-    right: 30px;
+	position: absolute;
+	width: 22px;
+	height: 15px;
+	top: 30px;
+	right: 30px;
 }
 header .m-toggle span {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #000;
-  border-radius: 4px;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	border-radius: 4px;
 }
 header .m-toggle span:nth-of-type(1) {
-  top: 0;
+	top: 0;
 }
 header .m-toggle span:nth-of-type(2) {
-  top: 6px;
+	top: 6px;
 }
 header .m-toggle span:nth-of-type(3) {
-  bottom: 0;
+	bottom: 0;
 }
 header .m-toggle.active span:nth-of-type(1) {
-  -webkit-transform: translateY(7px) rotate(-45deg);
-  transform: translateY(7px) rotate(-45deg);
+	-webkit-transform: translateY(7px) rotate(-45deg);
+	transform: translateY(7px) rotate(-45deg);
 }
 header .m-toggle.active span:nth-of-type(2) {
-  opacity: 0;
+	opacity: 0;
 }
 header .m-toggle.active span:nth-of-type(3) {
-  -webkit-transform: translateY(-5px) rotate(45deg);
-  transform: translateY(-5px) rotate(45deg);
+	-webkit-transform: translateY(-5px) rotate(45deg);
+	transform: translateY(-5px) rotate(45deg);
 }
 
 @media (min-width: 768px) {
@@ -278,9 +269,9 @@ header .m-toggle.active span:nth-of-type(3) {
 		border-bottom: 5px solid #000;
 		content: "";
 	}
-	header #toggle {
-		display: block;
-		float: right;
+	header .m-toggle,
+	header .m-toggle span {
+		display: inline-block;
 	}
 }
 @media (max-width: 370px) {
