@@ -17,10 +17,11 @@
 			<script src="js/jquery-3.3.1.min.js"></script>
 	</head>
 <body>
+	<div class="loader active"></div>
 	<div id="progress"></div>
 	<header id="header" class="active">
 		<div class="container" style="position: relative;">
-			<a href="#">
+			<a href="https://yoki-jp.com">
 				<img src="assets/logo.png" class="logo">
 			</a>
 			<nav id="nav">
@@ -134,6 +135,24 @@ $(document).ready(function() {
 	} else {
 		$('#progress').width(completion * windowWidth);
 	}});
+});
+</script>
+<script type="text/javascript">
+$(window).on('load', function(){
+	$('.loader').removeClass('active');
+});
+$(function() {
+	$('a:not([href^="#"]):not([target])').on('click', function(e){
+		e.preventDefault();
+		url = $(this).attr('href');
+		if (url !== '') {
+			$('.loader').addClass('active');
+			setTimeout(function(){
+				window.location = url;
+			}, 800);
+		}
+	return false;
+	});
 });
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->

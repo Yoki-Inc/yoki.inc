@@ -17,6 +17,7 @@
 			<script src="js/jquery-3.3.1.min.js"></script>
 	</head>
 <body>
+	<div class="loader active"></div>
 	<div id="completed">
 		<svg id="successAnimation" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
 			<path id="successAnimationResult" d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"/>
@@ -81,13 +82,13 @@
 				<img src="assets/haco.jpg" class="product">
 				<h2>HACO</h2>
 				<p>レーザーカッターでカットされたパーツで構成されています。コンピューターボードはRaspberry Piでソフトウェアの多くがオープンソースです。汎用的な部品で構成されており、誰もがカスタマイズすることができます。</p>
-				<a href="#" class="btn">HACOについて詳しく見る<i class="im im-external-link"></i></a>
+				<a href="https://haco-robot.com" class="btn">HACOについて詳しく見る<i class="im im-external-link"></i></a>
 			</div>
 			<div class="box" id="hacrew">
 				<img src="assets/hacrew.jpg" class="product">
 				<h2>HACREW</h2>
 				<p>誰もが使えるHACO用のソフトウェア開発環境です。ブロックプログラミングとテキストプログラミングを組み合わせているのが特徴で、ブロックで簡単にプログラムを組むこもできるし、テキストで一般的なコーディングをすることもできます。</p>
-				<a href="#" class="btn">HACREWについて詳しく見る<i class="im im-external-link"></i></a>
+				<a href="https://haco-robot.com" class="btn">HACREWについて詳しく見る<i class="im im-external-link"></i></a>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -302,6 +303,24 @@ $(function(){
 	$('#close').click(function(){
 		$("#completed").animate({opacity: '0'},500);
 		$('#completed').hide(500);
+	});
+});
+</script>
+<script type="text/javascript">
+$(window).on('load', function(){
+	$('.loader').removeClass('active');
+});
+$(function() {
+	$('a:not([href^="#"]):not([target])').on('click', function(e){
+		e.preventDefault();
+		url = $(this).attr('href');
+		if (url !== '') {
+			$('.loader').addClass('active');
+			setTimeout(function(){
+				window.location = url;
+			}, 800);
+		}
+	return false;
 	});
 });
 </script>
