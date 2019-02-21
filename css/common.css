@@ -1,4 +1,22 @@
 /**
+		LOADER
+					**/
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 99999;
+    pointer-events: none;
+    transition: transform .8s ease-in-out;
+    transform: translateY(-200vh);
+}
+.loader.active {
+    transform: translateY(0vh);
+}
+/**
 		COMMON CSS
 					**/
 html, body {
