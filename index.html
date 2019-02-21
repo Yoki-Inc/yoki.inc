@@ -42,7 +42,7 @@
 					<li><a class="toggle" href="#contact" class="last">CONTACT</a></li>
 				</ul>
 			</nav>
-			<a class="m-toggle">
+			<a class="m-toggle toggle">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -257,11 +257,11 @@ $(document).ready(function(){
 $(function(){
   if (window.matchMedia('(max-width:767px)').matches) {
 		$(function(){
-			$('.m-toggle').click(function(){
-				if ($('.m-toggle').hasClass('active')) {
-					$('.m-toggle').removeClass('active')
+			$('.toggle').click(function(){
+				if ($('.toggle').hasClass('active')) {
+					$('.toggle').removeClass('active')
 				} else {
-					$('.m-toggle').addClass('active')
+					$('.toggle').addClass('active')
 				}
 				$("nav").fadeToggle();
 			});
