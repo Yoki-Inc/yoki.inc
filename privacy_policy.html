@@ -13,8 +13,11 @@
 			<!-- CSS  -->
 			<link href="css/common.css" rel="stylesheet">
 			<link href="css/style.privacy_policy.css" rel="stylesheet">
+			<!-- jQuery -->
+			<script src="js/jquery-3.3.1.min.js"></script>
 	</head>
 <body>
+	<div id="progress"></div>
 	<header id="header" class="active">
 		<div class="container" style="position: relative;">
 			<a href="#">
@@ -102,6 +105,37 @@
 		</ul> 
 	</footer>
 </body>
+<script>
+$(function(){
+  if (window.matchMedia('(max-width:767px)').matches) {
+		$(function(){
+			$('.toggle').click(function(){
+				if ($('.toggle').hasClass('active')) {
+					$('.toggle').removeClass('active')
+				} else {
+					$('.toggle').addClass('active')
+				}
+				$("nav").fadeToggle();
+			});
+		});
+	}
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(window).on('load scroll', function() {
+		var docHeight = $(document).height();
+		var windowPos = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		var windowWidth = $(window).width();
+		var completion = windowPos / (docHeight - windowHeight);	
+	if (docHeight <= windowHeight) {
+		$('#progress').width(windowWidth);
+	} else {
+		$('#progress').width(completion * windowWidth);
+	}});
+});
+</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134694037-1"></script>
 <script>

@@ -278,7 +278,6 @@ $('a[href^="#"]').click(function() {
 	return false;
 });
 </script>
-
 <script type="text/javascript">
 $(document).ready(function() {
 	$(window).on('load scroll', function() {
@@ -286,15 +285,12 @@ $(document).ready(function() {
 		var windowPos = $(window).scrollTop();
 		var windowHeight = $(window).height();
 		var windowWidth = $(window).width();
-		var completion = windowPos / (docHeight - windowHeight);
-		
+		var completion = windowPos / (docHeight - windowHeight);	
 	if (docHeight <= windowHeight) {
 		$('#progress').width(windowWidth);
 	} else {
 		$('#progress').width(completion * windowWidth);
-	}
-	
-	});
+	}});
 });
 </script>
 <script>
