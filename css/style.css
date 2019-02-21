@@ -681,6 +681,9 @@ section#contact button:hover {
 	transition: .3s;
 	border: 2px solid #00253A;
 }
+section#contact button:hover i {
+	color: #fff;
+}
 @media (max-width: 767px) {
 	section#contact input, textarea, button {
 		width: 100%!important;
