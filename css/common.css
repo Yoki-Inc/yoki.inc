@@ -2,19 +2,34 @@
 		LOADER
 					**/
 .loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200vw;
-    height: 100vh;
-    background-color: #fff;
-    z-index: 99999;
-    pointer-events: none;
-    transition: transform .8s ease-in-out;
-    transform: translateY(-200vh);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #efefef;
+	z-index: 99999;
+	pointer-events: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 13vw;
+	font-style: italic;
+	text-decoration: underline;
 }
-.loader.active {
-    transform: translateY(0vh);
+.loader.in {
+	transform: translateY(0vh);
+}
+.loader.in.active {
+	transform: translateY(200vh);
+	transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.loader.out {
+	transform: translateY(-200vh);
+}
+.loader.out.active {
+	transform: translateY(0vh);
+	transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 /**
 		COMMON CSS
