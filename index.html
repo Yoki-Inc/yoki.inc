@@ -43,7 +43,7 @@
 					<li><a class="toggle" href="#contact" class="last">CONTACT</a></li>
 				</ul>
 			</nav>
-			<a class="m-toggle toggle">
+			<a class="m-toggle toggle" target>
 				<span></span>
 				<span></span>
 				<span></span>
@@ -311,7 +311,7 @@ $(window).on('load', function(){
 	$('.loader').removeClass('active');
 });
 $(function() {
-	$('a:not([href^="#"]):not([target])').on('click', function(e){
+	$('a:not([href^=""]):not([href^="#"]):not([target])').on('click', function(e){
 		e.preventDefault();
 		url = $(this).attr('href');
 		if (url !== '') {
