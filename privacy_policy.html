@@ -17,7 +17,8 @@
 			<script src="js/jquery-3.3.1.min.js"></script>
 	</head>
 <body>
-	<div class="loader active"></div>
+	<div class="loader in"><span>Loading</span></div>
+	<div class="loader out"><span>Loading</span></div>
 	<div id="progress"></div>
 	<header id="header" class="active">
 		<div class="container" style="position: relative;">
@@ -34,7 +35,7 @@
 					<li><a class="toggle" href="https://yoki-jp.com/#contact" class="last">CONTACT</a></li>
 				</ul>
 			</nav>
-			<a class="m-toggle">
+			<a class="m-toggle" target>
 				<span></span>
 				<span></span>
 				<span></span>
@@ -139,14 +140,14 @@ $(document).ready(function() {
 </script>
 <script type="text/javascript">
 $(window).on('load', function(){
-	$('.loader').removeClass('active');
+	$('.loader.in').addClass('active');
 });
 $(function() {
-	$('a:not([href^="#"]):not([target])').on('click', function(e){
+	$('a:not([href^=""]):not([href^="#"]):not([target])').on('click', function(e){
 		e.preventDefault();
 		url = $(this).attr('href');
 		if (url !== '') {
-			$('.loader').addClass('active');
+			$('.loader.out').addClass('active');
 			setTimeout(function(){
 				window.location = url;
 			}, 800);

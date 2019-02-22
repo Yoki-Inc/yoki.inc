@@ -393,7 +393,7 @@ section#contact .agreement span a {
 }
 section#contact button {
 	display: inline-block;
-	width: 103%;
+	box-sizing: border-box;
 	font-size: 20px;
 	text-align: center;
 	cursor: pointer;
