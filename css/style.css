@@ -355,6 +355,9 @@ section#contact label {
 	font-size: 20px;
 	line-height: 2em;
 }
+section#contact input::placeholder {
+	color: #c1c1c1;
+}
 section#contact input,
 section#contact textarea,
 section#contact button {
