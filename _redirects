@@ -10,3 +10,7 @@ https://wizardly-nobel-d616b5.netlify.com/* https://www.yoki.inc/:splat 301!
 
 # Redirect /privacy_policy
 https://www.yoki.inc/privacy_policy https://www.yoki.inc/ja/privacy_policy 301!
+
+# 404
+/* /404.html 404
+/ja/* /ja/404.html 404

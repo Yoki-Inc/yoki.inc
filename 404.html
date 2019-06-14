@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Official website of Yoki Inc. developing robots in the mission to create a friendly information terminal. We provide programming learning robot HACO and online learning service HACREW.">
+		<title>404 Not Found | Yoki Inc.｜Official Website</title>
+		<meta property="og:title" content="Yoki Inc.｜Official Website">
+		<meta property="og:type" content="article">
+		<meta property="og:url" content="https://www.yoki.inc/">
+		<meta property="og:image" content="https://www.yoki.inc/assets/ogp.jpg">
+		<meta property="og:site_name" content="Yoki Inc.｜Official Website">
+		<meta property="og:description" content="Official website of Yoki Inc. developing robots in the mission to create a friendly information terminal. We provide programming learning robot HACO and online learning service HACREW.">
+		<meta property="fb:app_id" content="1277385039067306">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@Yoki_Inc">
+		<meta name="twitter:creator" content="@Yoki_Inc">
+		<meta name="twitter:title" content="Yoki Inc.｜Official Website">
+		<meta name="twitter:description" content="Official website of Yoki Inc. developing robots in the mission to create a friendly information terminal. We provide programming learning robot HACO and online learning service HACREW.">
+		<meta name="twitter:image" content="https://www.yoki.inc/assets/ogp.jpg">
+			<!-- Ext CSS -->
+			<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+			<link href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" rel="stylesheet">
+			<!-- CSS  -->
+			<link href="css/common.css" rel="stylesheet">
+			<link href="css/style.404.css" rel="stylesheet">
+			<!-- jQuery -->
+			<script src="js/jquery-3.3.1.min.js"></script>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134694037-1"></script>
+			<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-134694037-1');
+			</script>
+	</head>
+<body>
+	<div class="loader in"><span>Loading</span></div>
+	<div class="loader out"><span>Loading</span></div>
+	<div id="progress"></div>
+	<header id="header">
+		<div class="container" style="position: relative;">
+			<a href="#">
+				<img src="assets/logo.png" class="logo">
+			</a>
+			<nav id="nav">
+				<ul>
+					<li><a class="toggle" href="#mission">MISSION</a></li>
+					<li><a class="toggle" href="#products">PRODUCT</a></li>
+					<li><a class="toggle" href="#board">TEAM</a></li>
+					<li><a class="toggle" href="#recruit">RECRUIT</a></li>
+					<li><a class="toggle" href="#about-us">ABOUT US</a></li>
+					<li><a class="toggle" href="#contact" class="last">CONTACT</a></li>
+					<li><a class="toggle lang-selector-sm" href="https://www.yoki.inc/ja/">- Japanese</a>
+				</ul>
+			</nav>
+			<a class="lang-selector" href="https://www.yoki.inc/ja/">Japanese🇯🇵</a>
+			<a class="m-toggle toggle" target>
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</div>
+	</header>
+	<div class="container" id="content">
+		<div class="lead">
+			<h1>Oops! 404...</h1>
+		</div>
+		<p>We couldn't find the page you were looking for.🙏</p>
+	</div>
+	<footer>
+		<span>© 2019 Yoki Inc.</span>
+		<ul>
+			<li><a href="https://www.facebook.com/Yoki.Inc/"><i class="im im-facebook"></i></a></li>
+			<li><a href="https://twitter.com/Yoki_Inc"><i class="im im-twitter"></i></a></li>
+			<li><a href="https://instagram.com/yoki_inc/"><i class="im im-instagram"></i></a></li>
+			<li><a href="https://www.youtube.com/channel/UCt8_BZFX_t7FQnHE9Pcb1QQ"><i class="im im-youtube"></i></a></li>
+		</ul>
+	</footer>
+</body>
+<script type="text/javascript">
+$(function(){
+	if (window.matchMedia('(max-width:662px)').matches) {
+		$(document).ready(function(){
+			$("section#top").css('background-position','right')
+		});
+	} else {
+	}
+});
+</script>
+<script>
+$(document).ready(function(){
+	$(window).scroll(function() {
+		if($(this).scrollTop() > $("#top").height()) {
+			$("header").addClass('active')
+		} else {
+			$("header").removeClass('active')
+		}
+	});
+});
+</script>
+<script>
+$(function(){
+  if (window.matchMedia('(max-width:767px)').matches) {
+		$(function(){
+			$('.toggle').click(function(){
+				if ($('.toggle').hasClass('active')) {
+					$('.toggle').removeClass('active')
+				} else {
+					$('.toggle').addClass('active')
+				}
+				$("nav").fadeToggle();
+			});
+		});
+	}
+});
+</script>
+<script>
+$('a[href^="#"]').click(function() {
+	var href= $(this).attr("href");
+	var target = $(href == "#" || href == "" ? 'html' : href);
+	var position = target.offset().top;
+	$('body,html').animate({scrollTop:position - 50}, 500, 'swing');
+	return false;
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(window).on('load scroll', function() {
+		var docHeight = $(document).height();
+		var windowPos = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		var windowWidth = $(window).width();
+		var completion = windowPos / (docHeight - windowHeight);
+	if (docHeight <= windowHeight) {
+		$('#progress').width(windowWidth);
+	} else {
+		$('#progress').width(completion * windowWidth);
+	}});
+});
+</script>
+<script type="text/javascript">
+$(window).on('load', function(){
+	$('.loader.in').addClass('active');
+});
+$(function() {
+	$('a:not([href^=""]):not([href^="#"]):not([target])').on('click', function(e){
+		e.preventDefault();
+		url = $(this).attr('href');
+		if (url !== '') {
+			$('.loader.out').addClass('active');
+			setTimeout(function(){
+				window.location = url;
+			}, 800);
+		}
+	return false;
+	});
+});
+</script>
+</html>
