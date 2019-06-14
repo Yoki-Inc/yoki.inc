@@ -1,0 +1,9 @@
+# These rules will change if you change your site’s custom domains or HTTPS settings
+
+# Redirect domain aliases to primary domain
+https://yoki-jp.com/* https://yoki.inc/:splat 301!
+https://www.yoki-jp.com/* https://yoki.inc/:splat 301!
+https://yoki.in.net/* https://yoki.inc/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://wizardly-nobel-d616b5.netlify.com/* https://yoki.inc/:splat 301!
