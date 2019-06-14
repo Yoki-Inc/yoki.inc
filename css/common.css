@@ -175,7 +175,7 @@ h1:after {
 		display: none;
 	}
 }
-/** 
+/**
 	PROGRESS BAR
 					**/
 #progress {
@@ -186,7 +186,7 @@ h1:after {
 	top: 0;
 	z-index: 999;
 }
-/** 
+/**
 		HEADER
 					**/
 header {
@@ -265,6 +265,15 @@ header .m-toggle.active span:nth-of-type(3) {
 	transform: translateY(-5px) rotate(45deg);
 }
 
+header .lang-selector {
+	float: right;
+	display: inline-block;
+	margin-right: 25px;
+	background: #3137431a;
+	padding: 6px 12px;
+	margin: 12px 0;
+	border-radius: 50px;
+}
 @media (min-width: 768px) {
 	header nav ul li a {
 		transition: .3s opacity;
@@ -273,6 +282,9 @@ header .m-toggle.active span:nth-of-type(3) {
 	header nav ul li a:hover {
 		transition: .3s opacity;
 		opacity: 0.5;
+	}
+	header .lang-selector-sm {
+		display: none;
 	}
 }
 @media (max-width: 767px) {
@@ -311,6 +323,9 @@ header .m-toggle.active span:nth-of-type(3) {
 		border-bottom: 5px solid #000;
 		content: "";
 	}
+	header .lang-selector {
+		display: none;
+	}
 	header .m-toggle,
 	header .m-toggle span {
 		display: inline-block;
@@ -322,7 +337,7 @@ header .m-toggle.active span:nth-of-type(3) {
 	}
 }
 /**
-		footer 
+		footer
 					**/
 footer {
 	background-color: #00253A;
