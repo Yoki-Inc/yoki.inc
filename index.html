@@ -18,22 +18,46 @@
 		<meta name="twitter:title" content="Yoki Inc.｜Official Website">
 		<meta name="twitter:description" content="Official website of Yoki Inc. developing robots in the mission to create a friendly information terminal. We provide programming learning robot HACO and online learning service HACREW.">
 		<meta name="twitter:image" content="https://www.yoki.inc/assets/ogp.jpg">
-			<!-- Ext CSS -->
-			<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
-			<link href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" rel="stylesheet">
-			<!-- CSS  -->
-			<link href="css/common.css" rel="stylesheet">
-			<link href="css/style.css" rel="stylesheet">
-			<!-- jQuery -->
-			<script src="js/jquery-3.3.1.min.js"></script>
-			<!-- Global site tag (gtag.js) - Google Analytics -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134694037-1"></script>
-			<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'UA-134694037-1');
-			</script>
+		<!-- Ext CSS -->
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+		<link href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" rel="stylesheet">
+		<!-- CSS  -->
+		<link href="css/common.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<!-- jQuery -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- reCAPTCHA -->
+		<script src="https://www.google.com/recaptcha/api.js"></script>
+		<script>
+		 function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
+		</script>
+ 		<script>
+		window.onload = function() {
+			var $recaptcha = document.querySelector('#g-recaptcha-response');
+			if($recaptcha) {
+				$recaptcha.setAttribute("required", "required");
+			}
+		};
+		</script>
+		<style>
+		#g-recaptcha-response {
+			display: block !important;
+			position: absolute;
+			margin: -78px 0 0 0 !important;
+			width: 302px !important;
+			height: 76px !important;
+			z-index: -999999;
+			opacity: 0;
+		}
+		</style>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134694037-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-134694037-1');
+		</script>
 	</head>
 <body>
 	<div class="loader in"><span>Loading</span></div>
@@ -226,9 +250,10 @@
 			<p>Inqueries and questions about HACO from education enterprises, please contact from <a href="https://haco-robot.com/contact">here</a></p>
 			<div class="form-container">
 				<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="czr-focus">
+					<input type=hidden name='captcha_settings' value='{"keyname":"reCAPTCHA_YOKI_INC","fallback":"true","orgId":"00D6F000002VY7U","ts":""}'>
 					<input type="hidden" name="orgid" value="00D6F000002VY7U">
-					<input type="hidden" name="retURL" value="https://yoki-jp.com?completed=true">
-					<input type="hidden" name="00N6F00000JRVuz" value="yoki-jp.com">
+					<input type="hidden" name="retURL" value="https://www.yoki.inc?completed=true">
+					<input type="hidden" name="00N6F00000JRVuz" value="yoki.inc">
 					<label for="company">Company Name</label><input id="company" maxlength="80" name="company" type="text" placeholder="Yoki Inc."><br>
 					<label for="name">Your Name(required)</label><input id="name" maxlength="80" name="name" type="text" placeholder="John Yoki" required><br>
 					<label for="email">E-mail Address (required)</label><input id="email" maxlength="80" name="email" type="email" required="" placeholder="hi@example.com" required><br>
@@ -237,6 +262,7 @@
 					<div class="agreement">
 						<span>*By sending this inquiry, I aknoledge that I have read the <a href="https://legal.yoki.inc/Privacy-Policy/">privacy policy</a> and I have agreed all policies.</span>
 					</div>
+					<div class="g-recaptcha" data-sitekey="6LftgKoUAAAAAKWyU4Lw4j1orSFVh8Yw-TiW8iI6"></div><br>
 					<button type="submit">
 						Submit<i class="im im-smiley-o"></i>
 					</button>
