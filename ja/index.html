@@ -18,22 +18,46 @@
 		<meta name="twitter:title" content="株式会社Yoki｜Yoki Inc.｜公式ウェブサイト">
 		<meta name="twitter:description" content=優しい情報端末をつくるをミッションにロボットを開発する、東出風馬率いる株式会社Yokiの公式ウェブサイトです。プログラミング学習ロボット「HACO」とオンライン学習サービス「HACREW」を提供しています。">
 		<meta name="twitter:image" content="https://www.yoki.inc/assets/ogp.jpg">
-			<!-- Ext CSS -->
-			<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
-			<link href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" rel="stylesheet">
-			<!-- CSS  -->
-			<link href="../css/common.css" rel="stylesheet">
-			<link href="../css/style.css" rel="stylesheet">
-			<!-- jQuery -->
-			<script src="../js/jquery-3.3.1.min.js"></script>
-			<!-- Global site tag (gtag.js) - Google Analytics -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134694037-1"></script>
-			<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'UA-134694037-1');
-			</script>
+		<!-- Ext CSS -->
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+		<link href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" rel="stylesheet">
+		<!-- CSS  -->
+		<link href="../css/common.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<!-- jQuery -->
+		<script src="../js/jquery-3.3.1.min.js"></script>
+		<!-- reCAPTCHA -->
+		<script src="https://www.google.com/recaptcha/api.js"></script>
+		<script>
+		 function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
+		</script>
+ 		<script>
+		window.onload = function() {
+			var $recaptcha = document.querySelector('#g-recaptcha-response');
+			if($recaptcha) {
+				$recaptcha.setAttribute("required", "required");
+			}
+		};
+		</script>
+		<style>
+		#g-recaptcha-response {
+			display: block !important;
+			position: absolute;
+			margin: -78px 0 0 0 !important;
+			width: 302px !important;
+			height: 76px !important;
+			z-index: -999999;
+			opacity: 0;
+		}
+		</style>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134694037-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-134694037-1');
+		</script>
 	</head>
 <body>
 	<div class="loader in"><span>Loading</span></div>
@@ -227,17 +251,19 @@
 			<p>教育機関の皆さまからのHACOの導入等に関するお問い合わせは<a href="https://haco-robot.com/contact">こちら</a>よりお願いいたします。</p>
 			<div class="form-container">
 				<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="czr-focus">
+					<input type=hidden name='captcha_settings' value='{"keyname":"reCAPTCHA_YOKI_INC","fallback":"true","orgId":"00D6F000002VY7U","ts":""}'>
 					<input type="hidden" name="orgid" value="00D6F000002VY7U">
 					<input type="hidden" name="retURL" value="https://www.yoki.inc/ja?completed=true">
-					<input type="hidden" name="00N6F00000JRVuz" value="yoki-jp.com">
+					<input type="hidden" name="00N6F00000JRVuz" value="yoki.inc/ja">
 					<label for="company">御社名</label><input id="company" maxlength="80" name="company" type="text" placeholder="株式会社Yoki"><br>
-					<label for="name">ご担当者様(必須)</label><input id="name" maxlength="80" name="name" type="text" placeholder="与喜 太郎" required><br>
+					<label for="name">ご担当者様(必須)</label><input id="name" maxlength="80" name="name" type="text" placeholder="与喜 太郎" required=""><br>
 					<label for="email">メールアドレス(必須)</label><input id="email" maxlength="80" name="email" type="email" required="" placeholder="hi@example.com" required><br>
 					<label for="phone">電話番号</label><input id="phone" maxlength="40" name="phone" type="tel" placeholder="080-1234-5678"><br>
 					<label for="description">お問い合わせ内容(必須)</label><textarea name="description" class="czr-focusable" required></textarea><br>
 					<div class="agreement">
-						<span>*このお問い合わせにより、私は<a href="https://www.yoki.inc/ja/privacy_policy">プライバシーポリシー</a>を読み、同意したことを表明します。</span>
+						<span>*このお問い合わせにより、私は<a href="https://legal.yoki.inc/Privacy-Policy/">プライバシーポリシー</a>を読み、同意したことを表明します。</span>
 					</div>
+					<div class="g-recaptcha" data-sitekey="6LftgKoUAAAAAKWyU4Lw4j1orSFVh8Yw-TiW8iI6"></div><br>
 					<button type="submit">
 						私たちに送る<i class="im im-smiley-o"></i>
 					</button>
