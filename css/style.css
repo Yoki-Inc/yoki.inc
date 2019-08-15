@@ -98,6 +98,7 @@ section#products .box {
 	width: 50%;
 	box-sizing: border-box;
 	float: left;
+	margin-bottom: 30px;
 }
 section#products img {
 	width: 100%;
@@ -114,7 +115,8 @@ section#products .box h2 {
 	}
 }
 @media (min-width: 768px) {
-	section#products .box#haco {
+	section#products .box#haco,
+	section#products .box#logy {
 		padding-right: 50px;
 	}
 	section#products .box#hacrew {
