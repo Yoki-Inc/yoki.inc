@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="Official website of Yoki Inc. developing robots in the mission to create a friendly information terminal. We provide programming learning robot HACO and online learning service HACREW.">
-		<title>Yoki Inc.｜Official Website</title>
-		<meta property="og:title" content="Yoki Inc.｜Official Website">
+		<meta name="description" content="優しい情報端末をつくるをミッションにロボットを開発する、東出風馬率いる株式会社Yokiの公式ウェブサイトです。プログラミング学習ロボット「HACO」とオンライン学習サービス「HACREW」を提供しています。">
+		<title>株式会社Yoki｜Yoki Inc.｜公式ウェブサイト</title>
+		<meta property="og:title" content="株式会社Yoki｜Yoki Inc.｜公式ウェブサイト">
 		<meta property="og:type" content="article">
 		<meta property="og:url" content="https://www.yoki.inc/">
 		<meta property="og:image" content="https://www.yoki.inc/assets/ogp.jpg">
-		<meta property="og:site_name" content="Yoki Inc.｜Official Website">
-		<meta property="og:description" content="Official website of Yoki Inc. developing robots in the mission to create a friendly information terminal. We provide programming learning robot HACO and online learning service HACREW.">
+		<meta property="og:site_name" content="株式会社Yoki｜Yoki Inc.｜公式ウェブサイト">
+		<meta property="og:description" content="優しい情報端末をつくるをミッションにロボットを開発する、東出風馬率いる株式会社Yokiの公式ウェブサイトです。プログラミング学習ロボット「HACO」とオンライン学習サービス「HACREW」を提供しています。">
 		<meta property="fb:app_id" content="1277385039067306">
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@Yoki_Inc">
 		<meta name="twitter:creator" content="@Yoki_Inc">
-		<meta name="twitter:title" content="Yoki Inc.｜Official Website">
-		<meta name="twitter:description" content="Official website of Yoki Inc. developing robots in the mission to create a friendly information terminal. We provide programming learning robot HACO and online learning service HACREW.">
+		<meta name="twitter:title" content="株式会社Yoki｜Yoki Inc.｜公式ウェブサイト">
+		<meta name="twitter:description" content=優しい情報端末をつくるをミッションにロボットを開発する、東出風馬率いる株式会社Yokiの公式ウェブサイトです。プログラミング学習ロボット「HACO」とオンライン学習サービス「HACREW」を提供しています。">
 		<meta name="twitter:image" content="https://www.yoki.inc/assets/ogp.jpg">
 		<!-- Ext CSS -->
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
@@ -26,30 +26,6 @@
 		<link href="css/style.css" rel="stylesheet">
 		<!-- jQuery -->
 		<script src="js/jquery-3.3.1.min.js"></script>
-		<!-- reCAPTCHA -->
-		<script src="https://www.google.com/recaptcha/api.js"></script>
-		<script>
-		 function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
-		</script>
- 		<script>
-		window.onload = function() {
-			var $recaptcha = document.querySelector('#g-recaptcha-response');
-			if($recaptcha) {
-				$recaptcha.setAttribute("required", "required");
-			}
-		};
-		</script>
-		<style>
-		#g-recaptcha-response {
-			display: block !important;
-			position: absolute;
-			margin: -78px 0 0 0 !important;
-			width: 302px !important;
-			height: 76px !important;
-			z-index: -999999;
-			opacity: 0;
-		}
-		</style>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134694037-1"></script>
 		<script>
@@ -60,322 +36,23 @@
 		</script>
 	</head>
 <body>
-	<div class="loader in"><span>Loading</span></div>
-	<div class="loader out"><span>Loading</span></div>
-	<div id="completed">
-		<svg id="successAnimation" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
-			<path id="successAnimationResult" d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"/>
-			<circle id="successAnimationCircle" cx="35" cy="35" r="24"  stroke-width="2" stroke-linecap="round" fill="transparent"/>
-			<polyline id="successAnimationCheck"  stroke-width="2" points="23 34 34 43 47 27" fill="transparent"/>
-		</svg>
-		<p>We've received your inquiry correctly. We usually respond within 3 business days.</p>
-		<button id="close">Close</button>
+	<div class="container">
+		<img src="assets/logo.png" class="logo">
+		<div class="message">
+			<h1 class="message_h1">世界中にもっとモノづくりの楽しさを。</h1>
+			<h2 class="message_h2">Your Creativity Knows No Bounds.</h2>
+		</div>
+		<div class="menu">
+			<div class="menu_title"><span></span>MENU</div>
+			<a href="https://logy.app/" class="menu_link">Service</a>
+			<a href="#" class="menu_link">Board</a>
+			<a href="mailto:pr@yoki.inc" class="menu_link">Contact</a>
+		</div>
+		<div class="info">
+			<p><span>社名</span>株式会社Yoki</p>
+			<p><span>本社</span>神奈川県鎌倉市御成町11-37</p>
+			<p><span>資本金</span>3640万4400円</p>
+		</div>
 	</div>
-	<div id="progress"></div>
-	<header id="header">
-		<div class="container" style="position: relative;">
-			<a href="#">
-				<img src="assets/logo.png" class="logo">
-			</a>
-			<nav id="nav">
-				<ul>
-					<li><a class="toggle" href="#mission">MISSION</a></li>
-					<li><a class="toggle" href="#products">PRODUCT</a></li>
-					<li><a class="toggle" href="#board">TEAM</a></li>
-					<li><a class="toggle" href="#recruit">RECRUIT</a></li>
-					<li><a class="toggle" href="#about-us">ABOUT US</a></li>
-					<li><a class="toggle" href="#contact" class="last">CONTACT</a></li>
-					<li><a class="toggle lang-selector-sm" href="https://www.yoki.inc/ja/">- Japanese</a>
-				</ul>
-			</nav>
-			<a class="lang-selector" href="https://www.yoki.inc/ja/"><span>Japanese</span>🇯🇵</a>
-			<a class="m-toggle toggle" target>
-				<span></span>
-				<span></span>
-				<span></span>
-			</a>
-		</div>
-	</header>
-	<section id="top" style="height:0;">
-<!--		<img src="assets/top-bg.jpg" class="top-bg"> -->
-	</section>
-	<section id="mission">
-		<div class="container">
-			<h1><span>We are making your friendly </span><br><span>robot</span></h1>
-			<p>"The Computer is a Bicycle For Our Minds"<br>- Steve Jobs</p>
-			<p>As a bike that makes the most of your physical abilities,<br>
-			Create a knowledge bicycle that makes the most of people's intellectual abilities.</p>
-			<p>It became a reality, and computers maximized human productivity.</p>
-			<p>Now we can get meals with just a smartphone,<br>
-			Getting the best size of your clothes are delivered directly to your house.</p>
-			<p>Although many people think<br>
-			<span>"We have everything, but something isn't filled yet."</span></p>
-			<p>The development of technology overthrows emotions.</p>
-			<p>We do not want to ignore people's feelings, we want to create a "bike" that fits in people's feelings.</p>
-			<p>It is not an information terminal that improves efficiency and speed,<br>
-			Create a friendly information terminal that can connect on an emotion basis.</p>
-
-			<a href="https://speakerdeck.com/yoki_inc/zhu-shi-hui-she-yoki-hui-she-gai-yao-zi-liao-2019-1q" class="btn" target="_blank">Take a look at our portfolio slides (Japanese)<i class="im im-external-link"></i></a>
-		</div>
-	</section>
-	<section id="products">
-		<div class="container">
-			<div class="lead">
-				<h1>Our Products</h1>
-			</div>
-			<div class="box" id="haco">
-				<img src="assets/haco.jpg" class="product">
-				<h2>HACO</h2>
-				<p>The computer board is Raspberry Pi and much of the software is open source. All made by generic parts and can be customized by everyone.</p>
-				<a href="https://haco-robot.com" class="btn">See more about HACO (Japanese)<i class="im im-external-link"></i></a>
-			</div>
-			<div class="box" id="hacrew">
-				<img src="assets/hacrew.jpg" class="product">
-				<h2>HACREW</h2>
-				<p>A software development environment for HACO that everyone can use. Block programming and text programming, became much easier to make progams</p>
-				<a href="https://haco-robot.com" class="btn">See more about HACREW (Japanese)<i class="im im-external-link"></i></a>
-			</div>
-			<div class="clear"></div>
-			<div class="box" id="logy">
-				<img src="assets/logy.jpg" class="product">
-				<h2 style="color:#ce244d;">LOGY</h2>
-				<p>LOGY is an online school, which provides private coding tutors for kids. You can start learning programming whenever from wherever!</p>
-				<a href="https://logy.app" class="btn">See more about LOGY (Japanese)<i class="im im-external-link"></i></a>
-			</div>
-			<div class="clear"></div>
-		</div>
-	</section>
-	<section id="board">
-		<div class="container">
-			<div class="lead">
-				<h1>Board of Directors</h1>
-			</div>
-			<div class="column-container">
-				<div class="left-column column">
-					<img src="assets/fuma_higashide.jpg">
-					<div class="profile-link">
-						<a href="https://twitter.com/fumah815" target="_blank"><i class="im im-twitter"></i></a>
-						<a href="https://m.me/fumah815" target="_blank"><i class="im im-facebook-messenger"></i></a>
-					</div>
-				</div>
-				<div class="right-column column">
-					<h2><span class="role">CEO</span><br>   Fuma Higashide
-						<span class="profile-link">
-							<a href="https://twitter.com/fumah815" target="_blank"><i class="im im-twitter"></i></a>
-							<a href="https://m.me/fumah815" target="_blank"><i class="im im-facebook-messenger"></i></a>
-						</span>
-					</h2>
-					<p>Started thinking about the project Yoki at the age of 2nd year in junior high school. In 2016, at the age of 16, applied for TOKYO STARTUP GATEWAY, which is one of the largest business contests in Tokyo. Awarded with the theme concept "Creating an active and intuitive robot that exceeds the limits of conventional information terminals."</p>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="column-container">
-				<div class="left-column column">
-					<img src="assets/naoki_shirahige.jpg">
-					<div class="profile-link">
-						<a href="https://twitter.com/_naonosuke" target="_blank"><i class="im im-twitter"></i></a>
-						<a href="https://m.me/naonosuke.jp" target="_blank"><i class="im im-facebook-messenger"></i></a>
-					</div>
-				</div>
-				<div class="right-column column">
-					<h2><span class="role">COO</span><br>   Naoki Shirahige
-						<span class="profile-link">
-							<a href="https://twitter.com/_naonosuke" target="_blank"><i class="im im-twitter"></i></a>
-							<a href="https://m.me/naonosuke.jp" target="_blank"><i class="im im-facebook-messenger"></i></a>
-						</span>
-					</h2>
-					<p>After working as a freelancer, IT venture, educational organization representative, etc., he moved to a business-type educational NPO, took on business planning, and tried to rebuild business performance. The business achieved a V-shaped recovery in about one year. Joined Yoki Inc. in May 2018 and became director of development department. Currently engaged in educational activities, such as the director of CRoots.</p>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="column-container">
-				<div class="left-column column">
-					<img src="assets/takaya_haneda.jpg">
-				</div>
-				<div class="right-column column">
-					<h2><span class="role">CFO</span><br>   Takaya Haneda</h2>
-					<p>Have been working in investment banking at Daiwa Securities SMBC. In the IPO section, we will build equity stories, valuation, IPO consulting, etc. from financial duyiri to unlisted companies such as venture companies and listed companies. After that, he joined Raksul Co., Ltd., and started the business as a PM of the printing EC business, and he was general manager and customer support manager. Returned to Daiwa Securities in 2014 and conducted IPO operations, and achieved IPOs for a total of 5 companies. Currently independent and representative of Bus Unit Co., Ltd.</p>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-	</section>
-	<section id="recruit">
-		<div class="container">
-			<div class="lead">
-				<h1>Recruit</h1>
-			</div>
-			<p>Yoki aims to "work anywhere in the world, any commit time". There are also crews who work while doing secondary work while raising children. We share each wisdom and experience from each area and aim for a better team. Let's work together.</p>
-			<div class="wework">
-				<img src="assets/wework-1.jpg">
-				<img src="assets/wework-2.jpg">
-				<img src="assets/wework-3.jpg">
-				<img src="assets/wework-4.jpg">
-			</div>
-			<div class="clear"></div>
-			<a href="https://open.talentio.com/1/c/yoki/requisitions/822" class="btn">See employment information (Japanese)<i class="im im-external-link"></i></a>
-		</div>
-	</section>
-	<section id="about-us">
-		<div class="container">
-			<div class="lead">
-				<h1>Corporate Information</h1>
-			</div>
-			<table>
-				<tbody>
-					<tr>
-						<th>Company Name</th>
-						<td>Yoki Inc.</td>
-					</tr>
-					<tr>
-						<th>Board Members</th>
-						<td>CEO　Fuma Higashide<br>
-								COO	　Naoki Shirahige<br>
-								CFO　Takaya Haneda</td>
-					</tr>
-					<tr>
-						<th>Products</th>
-						<td>Robot hardware and software development and sales</td>
-					</tr>
-					<tr>
-						<th>Founded</th>
-						<td>February 15 2017</td>
-					</tr>
-					<tr>
-						<th>Head Office</th>
-						<td>Yoki Labo, 2-1398 Minamiōya, Machida, Tokyo. 〒194-0031</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</section>
-	<section id="contact">
-		<div class="container">
-			<div class="lead">
-				<h1>Contact</h1>
-			</div>
-			<p>Inqueries and questions about HACO from education enterprises, please contact from <a href="https://haco-robot.com/contact">here</a></p>
-			<div class="form-container">
-				<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="czr-focus">
-					<input type=hidden name='captcha_settings' value='{"keyname":"reCAPTCHA_YOKI_INC","fallback":"true","orgId":"00D6F000002VY7U","ts":""}'>
-					<input type="hidden" name="orgid" value="00D6F000002VY7U">
-					<input type="hidden" name="retURL" value="https://www.yoki.inc?completed=true">
-					<input type="hidden" name="00N6F00000JRVuz" value="yoki.inc">
-					<label for="company">Company Name</label><input id="company" maxlength="80" name="company" type="text" placeholder="Yoki Inc."><br>
-					<label for="name">Your Name(required)</label><input id="name" maxlength="80" name="name" type="text" placeholder="John Yoki" required><br>
-					<label for="email">E-mail Address (required)</label><input id="email" maxlength="80" name="email" type="email" required="" placeholder="hi@example.com" required><br>
-					<label for="phone">Telephone</label><input id="phone" maxlength="40" name="phone" type="tel" placeholder="+81 80-1234-5678"><br>
-					<label for="description">Message (required)</label><textarea name="description" class="czr-focusable" required></textarea><br>
-					<div class="agreement">
-						<span>*By sending this inquiry, I aknoledge that I have read the <a href="https://legal.yoki.inc/Privacy-Policy/">privacy policy</a> and I have agreed all policies.</span>
-					</div>
-					<div class="g-recaptcha" data-sitekey="6LftgKoUAAAAAKWyU4Lw4j1orSFVh8Yw-TiW8iI6"></div><br>
-					<button type="submit">
-						Submit<i class="im im-smiley-o"></i>
-					</button>
-				</form>
-			</div>
-		</div>
-	</section>
-	<footer>
-		<span>© 2019 Yoki Inc.</span>
-		<ul>
-			<li><a href="https://www.facebook.com/Yoki.Inc/"><i class="im im-facebook"></i></a></li>
-			<li><a href="https://twitter.com/Yoki_Inc"><i class="im im-twitter"></i></a></li>
-			<li><a href="https://instagram.com/yoki_inc/"><i class="im im-instagram"></i></a></li>
-			<li><a href="https://www.youtube.com/channel/UCt8_BZFX_t7FQnHE9Pcb1QQ"><i class="im im-youtube"></i></a></li>
-		</ul>
-	</footer>
 </body>
-<script type="text/javascript">
-$(function(){
-	if (window.matchMedia('(max-width:662px)').matches) {
-		$(document).ready(function(){
-			$("section#top").css('background-position','right')
-		});
-	} else {
-	}
-});
-</script>
-<script>
-$(document).ready(function(){
-	$(window).scroll(function() {
-		if($(this).scrollTop() > $("#top").height()) {
-			$("header").addClass('active')
-		} else {
-			$("header").removeClass('active')
-		}
-	});
-});
-</script>
-<script>
-$(function(){
-  if (window.matchMedia('(max-width:767px)').matches) {
-		$(function(){
-			$('.toggle').click(function(){
-				if ($('.toggle').hasClass('active')) {
-					$('.toggle').removeClass('active')
-				} else {
-					$('.toggle').addClass('active')
-				}
-				$("nav").fadeToggle();
-			});
-		});
-	}
-});
-</script>
-<script>
-$('a[href^="#"]').click(function() {
-	var href= $(this).attr("href");
-	var target = $(href == "#" || href == "" ? 'html' : href);
-	var position = target.offset().top;
-	$('body,html').animate({scrollTop:position - 50}, 500, 'swing');
-	return false;
-});
-</script>
-<script type="text/javascript">
-$(document).ready(function() {
-	$(window).on('load scroll', function() {
-		var docHeight = $(document).height();
-		var windowPos = $(window).scrollTop();
-		var windowHeight = $(window).height();
-		var windowWidth = $(window).width();
-		var completion = windowPos / (docHeight - windowHeight);
-	if (docHeight <= windowHeight) {
-		$('#progress').width(windowWidth);
-	} else {
-		$('#progress').width(completion * windowWidth);
-	}});
-});
-</script>
-<script>
-$(function(){
-	if("?completed=true" == location.search) {
-		$("#completed").addClass("active");
-		$("#successAnimation").addClass("animated");
-	}
-	$('#close').click(function(){
-		$("#completed").animate({opacity: '0'},500);
-		$('#completed').hide(500);
-	});
-});
-</script>
-<script type="text/javascript">
-$(window).on('load', function(){
-	$('.loader.in').addClass('active');
-});
-$(function() {
-	$('a:not([href^=""]):not([href^="#"]):not([target])').on('click', function(e){
-		e.preventDefault();
-		url = $(this).attr('href');
-		if (url !== '') {
-			$('.loader.out').addClass('active');
-			setTimeout(function(){
-				window.location = url;
-			}, 800);
-		}
-	return false;
-	});
-});
-</script>
 </html>
