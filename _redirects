@@ -8,9 +8,9 @@ https://yoki.in.net/* https://www.yoki.inc/:splat 301!
 # Redirect /privacy_policy
 https://www.yoki.inc/privacy_policy https://www.yoki.inc/ja/privacy_policy 301!
 
+# Previous URL
+https://www.yoki.inc/ja/* https://www.yoki.inc/ 301!
+https://yoki.inc/ja/* https://www.yoki.inc/ 301!
+
 # 404
 /* /404.html 404
-
-# Previous URL
-https://www.yoki.inc/ja https://www.yoki.inc/ 301!
-https://yoki.inc/ja https://www.yoki.inc/ 301!
